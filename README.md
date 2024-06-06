@@ -6,7 +6,7 @@
 - Ubuntu 22.04 (5.15.0-107-generic)
 - Cuda 12.4.1
 - Nvidia driver 550.54.15
-
+- gpu_nvidia [main/e8534f0](https://github.com/nanovms/gpu-nvidia/commit/e8534f04869d728e76a4c35e2fa12b2301f550f9)
 
 ## Run deviceQuery in nanos
 ```
