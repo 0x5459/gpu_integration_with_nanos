@@ -1,0 +1,720 @@
+NVRM _sysCreateOs: RM Access Sys Cap creation failed: 0x56
+NVRM: loading NVIDIA UNIX Open Kernel Module for x86_64  535.113.01  Release Build  (root@ipfs)  Tue Jun  4 01:42:09 PM CST 2024
+Loaded the UVM driver, major device number 0.
+    2 brk
+    2 direct return: 7831552, rsp 0xffe65c18
+    2 arch_prctl
+    2 arch_prctl: code 0x3001, addr 0xffe65bc0
+    2 direct return: -22, rsp 0xffe65b10
+    2 uname
+    2 direct return: 0, rsp 0xffe65758
+    2 mmap
+    2 mmap: addr 0x0000000000000000, length 0x2000, prot 0x3, flags 0x22, fd -1, offset 0x0
+    2    returning 0x48be979000
+    2 direct return: 312435249152, rsp 0xffe658b8
+    2 access
+    2 access: "/etc/ld.so.preload", mode 4
+    2 direct return: -2, rsp 0xffe65948
+    2 openat
+    2 "/etc/ld.so.cache" - not found
+    2 direct return: -2, rsp 0xffe64d08
+    2 openat
+    2 "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3/libstdc++.so.6" - not found
+    2 direct return: -2, rsp 0xffe64cb8
+    2 newfstatat
+    2 stat: cwd 0xffff80c000000040, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3", follow, buf 0x00000000ffe64de0
+    2 direct return: -2, rsp 0xffe64d18
+    2 openat
+    2 "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2/libstdc++.so.6" - not found
+    2 direct return: -2, rsp 0xffe64cb8
+    2 newfstatat
+    2 stat: cwd 0xffff80c000000040, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2", follow, buf 0x00000000ffe64de0
+    2 direct return: -2, rsp 0xffe64d18
+    2 openat
+    2 "/lib/x86_64-linux-gnu/tls/x86_64/libstdc++.so.6" - not found
+    2 direct return: -2, rsp 0xffe64cb8
+    2 newfstatat
+    2 stat: cwd 0xffff80c000000040, "/lib/x86_64-linux-gnu/tls/x86_64", follow, buf 0x00000000ffe64de0
+    2 direct return: -2, rsp 0xffe64d18
+    2 openat
+    2 "/lib/x86_64-linux-gnu/tls/libstdc++.so.6" - not found
+    2 direct return: -2, rsp 0xffe64cb8
+    2 newfstatat
+    2 stat: cwd 0xffff80c000000040, "/lib/x86_64-linux-gnu/tls", follow, buf 0x00000000ffe64de0
+    2 direct return: -2, rsp 0xffe64d18
+    2 openat
+    2 "/lib/x86_64-linux-gnu/x86_64/libstdc++.so.6" - not found
+    2 direct return: -2, rsp 0xffe64cb8
+    2 newfstatat
+    2 stat: cwd 0xffff80c000000040, "/lib/x86_64-linux-gnu/x86_64", follow, buf 0x00000000ffe64de0
+    2 direct return: -2, rsp 0xffe64d18
+    2 openat
+    2    fd 3, length 2260296, offset 0
+    2 direct return: 3, rsp 0xffe64cb8
+    2 read
+    2 file_read: f 0xffffc000000997b0, dest 0x00000000ffe64f48, offset 0 (file), length 832, file length 2260296
+    2 sleep uninterruptible
+    2 file_read_complete: status (none)
+    2    read count 832
+    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
+    2 newfstatat
+    2 fd 3, stat 0x00000000ffe64de0
+    2 st_ino ffff80c000000a80, st_mode 0x81a4, st_size 227d48
+    2 direct return: 0, rsp 0xffe64d38
+    2 mmap
+    2 mmap: addr 0x0000000000000000, length 0x22b8c0, prot 0x1, flags 0x802, fd 3, offset 0x0
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02a00 @ offset 0x0
+    2    returning 0x74e4db000
+    2 direct return: 31378485248, rsp 0xffe64a98
+    2 mprotect
+    2 mprotect: addr 0x000000074e575000, len 0x181000, prot 0x0
+    2 vmap_update_protections_locked: validate [0x74e575000 0x74e6f6000)
+    2 direct return: 0, rsp 0xffe64a98
+    2 mmap
+    2 mmap: addr 0x000000074e575000, length 0x111000, prot 0x5, flags 0x812, fd 3, offset 0x9a000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02a00 @ offset 0x9a000
+    2 vmap_remove_intersection: q [0x74e575000 0x74e686000), r [0x74e4db000 0x74e707000)
+    2    returning 0x74e575000
+    2 direct return: 31379116032, rsp 0xffe64a98
+    2 mmap
+    2 mmap: addr 0x000000074e686000, length 0x6f000, prot 0x1, flags 0x812, fd 3, offset 0x1ab000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02a00 @ offset 0x1ab000
+    2 vmap_remove_intersection: q [0x74e686000 0x74e6f5000), r [0x74e686000 0x74e707000)
+    2    returning 0x74e686000
+    2 direct return: 31380234240, rsp 0xffe64a98
+    2 mmap
+    2 mmap: addr 0x000000074e6f6000, length 0xe000, prot 0x3, flags 0x812, fd 3, offset 0x21a000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02a00 @ offset 0x21a000
+    2 vmap_remove_intersection: q [0x74e6f6000 0x74e704000), r [0x74e686000 0x74e707000)
+    2    returning 0x74e6f6000
+    2 direct return: 31380692992, rsp 0xffe64a98
+    2 mmap
+    2 mmap: addr 0x000000074e704000, length 0x28c0, prot 0x3, flags 0x32, fd -1, offset 0x0
+    2 vmap_remove_intersection: q [0x74e704000 0x74e707000), r [0x74e704000 0x74e707000)
+    2    returning 0x74e704000
+    2 direct return: 31380750336, rsp 0xffe64a98
+    2 close
+    2 close: fd 3
+    2 direct return: 0, rsp 0xffe64d38
+    2 openat
+    2    fd 3, length 125488, offset 0
+    2 direct return: 3, rsp 0xffe64c98
+    2 read
+    2 file_read: f 0xffffc000000998f8, dest 0x00000000ffe64f28, offset 0 (file), length 832, file length 125488
+    2 sleep uninterruptible
+    2 file_read_complete: status (none)
+    2    read count 832
+    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
+    2 newfstatat
+    2 fd 3, stat 0x00000000ffe64dc0
+    2 st_ino ffff80c000000500, st_mode 0x81a4, st_size 1ea30
+    2 direct return: 0, rsp 0xffe64d18
+    2 mmap
+    2 mmap: addr 0x0000000000000000, length 0x1f2e8, prot 0x1, flags 0x802, fd 3, offset 0x0
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02c00 @ offset 0x0
+    2    returning 0x64119f000
+    2 direct return: 26862022656, rsp 0xffe64aa8
+    2 mmap
+    2 mmap: addr 0x00000006411a2000, length 0x17000, prot 0x5, flags 0x812, fd 3, offset 0x3000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02c00 @ offset 0x3000
+    2 vmap_remove_intersection: q [0x6411a2000 0x6411b9000), r [0x64119f000 0x6411bf000)
+    2    returning 0x6411a2000
+    2 direct return: 26862034944, rsp 0xffe64aa8
+    2 mmap
+    2 mmap: addr 0x00000006411b9000, length 0x4000, prot 0x1, flags 0x812, fd 3, offset 0x1a000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02c00 @ offset 0x1a000
+    2 vmap_remove_intersection: q [0x6411b9000 0x6411bd000), r [0x6411b9000 0x6411bf000)
+    2    returning 0x6411b9000
+    2 direct return: 26862129152, rsp 0xffe64aa8
+    2 mmap
+    2 mmap: addr 0x00000006411bd000, length 0x2000, prot 0x3, flags 0x812, fd 3, offset 0x1d000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02c00 @ offset 0x1d000
+    2 vmap_remove_intersection: q [0x6411bd000 0x6411bf000), r [0x6411b9000 0x6411bf000)
+    2    returning 0x6411bd000
+    2 direct return: 26862145536, rsp 0xffe64aa8
+    2 close
+    2 close: fd 3
+    2 direct return: 0, rsp 0xffe64d18
+    2 openat
+    2    fd 3, length 2220400, offset 0
+    2 direct return: 3, rsp 0xffe64c78
+    2 read
+    2 file_read: f 0xffffc00000099a40, dest 0x00000000ffe64f08, offset 0 (file), length 832, file length 2220400
+    2 sleep uninterruptible
+    2 file_read_complete: status (none)
+    2    read count 832
+    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
+    2 pread64
+    2 file_read: f 0xffffc00000099a40, dest 0x00000000ffe64960, offset 64 (specified), length 784, file length 2220400
+    2 sleep uninterruptible
+    2 file_read_complete: status (none)
+    2    read count 784
+    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b9e
+    2 pread64
+    2 file_read: f 0xffffc00000099a40, dest 0x00000000ffe64920, offset 848 (specified), length 48, file length 2220400
+    2 sleep uninterruptible
+    2 file_read_complete: status (none)
+    2    read count 48
+    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b9e
+    2 pread64
+    2 file_read: f 0xffffc00000099a40, dest 0x00000000ffe648d0, offset 896 (specified), length 68, file length 2220400
+    2 sleep uninterruptible
+    2 file_read_complete: status (none)
+    2    read count 68
+    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b9e
+    2 newfstatat
+    2 fd 3, stat 0x00000000ffe64da0
+    2 st_ino ffff80c000000800, st_mode 0x81a4, st_size 21e170
+    2 direct return: 0, rsp 0xffe64cf8
+    2 pread64
+    2 file_read: f 0xffffc00000099a40, dest 0x00000000ffe649e0, offset 64 (specified), length 784, file length 2220400
+    2 sleep uninterruptible
+    2 file_read_complete: status (none)
+    2    read count 784
+    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b9e
+    2 mmap
+    2 mmap: addr 0x0000000000000000, length 0x228e50, prot 0x1, flags 0x802, fd 3, offset 0x0
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02200 @ offset 0x0
+    2    returning 0x5179fd000
+    2 direct return: 21871185920, rsp 0xffe646c8
+    2 mprotect
+    2 mprotect: addr 0x0000000517a25000, len 0x1ee000, prot 0x0
+    2 vmap_update_protections_locked: validate [0x517a25000 0x517c13000)
+    2 direct return: 0, rsp 0xffe646c8
+    2 mmap
+    2 mmap: addr 0x0000000517a25000, length 0x195000, prot 0x5, flags 0x812, fd 3, offset 0x28000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02200 @ offset 0x28000
+    2 vmap_remove_intersection: q [0x517a25000 0x517bba000), r [0x5179fd000 0x517c26000)
+    2    returning 0x517a25000
+    2 direct return: 21871349760, rsp 0xffe646c8
+    2 mmap
+    2 mmap: addr 0x0000000517bba000, length 0x58000, prot 0x1, flags 0x812, fd 3, offset 0x1bd000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02200 @ offset 0x1bd000
+    2 vmap_remove_intersection: q [0x517bba000 0x517c12000), r [0x517bba000 0x517c26000)
+    2    returning 0x517bba000
+    2 direct return: 21873008640, rsp 0xffe646c8
+    2 mmap
+    2 mmap: addr 0x0000000517c13000, length 0x6000, prot 0x3, flags 0x812, fd 3, offset 0x215000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02200 @ offset 0x215000
+    2 vmap_remove_intersection: q [0x517c13000 0x517c19000), r [0x517bba000 0x517c26000)
+    2    returning 0x517c13000
+    2 direct return: 21873373184, rsp 0xffe646c8
+    2 mmap
+    2 mmap: addr 0x0000000517c19000, length 0xce50, prot 0x3, flags 0x32, fd -1, offset 0x0
+    2 vmap_remove_intersection: q [0x517c19000 0x517c26000), r [0x517c19000 0x517c26000)
+    2    returning 0x517c19000
+    2 direct return: 21873397760, rsp 0xffe646c8
+    2 close
+    2 close: fd 3
+    2 direct return: 0, rsp 0xffe649d8
+    2 openat
+    2    fd 3, length 940560, offset 0
+    2 direct return: 3, rsp 0xffe64c38
+    2 read
+    2 file_read: f 0xffffc00000099b88, dest 0x00000000ffe64ec8, offset 0 (file), length 832, file length 940560
+    2 sleep uninterruptible
+    2 file_read_complete: status (none)
+    2    read count 832
+    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
+    2 newfstatat
+    2 fd 3, stat 0x00000000ffe64d60
+    2 st_ino ffff80c0000009c0, st_mode 0x81a4, st_size e5a10
+    2 direct return: 0, rsp 0xffe64cb8
+    2 mmap
+    2 mmap: addr 0x0000000000000000, length 0xe6108, prot 0x1, flags 0x802, fd 3, offset 0x0
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02600 @ offset 0x0
+    2    returning 0x278d0f000
+    2 direct return: 10616893440, rsp 0xffe64a48
+    2 mmap
+    2 mmap: addr 0x0000000278d1d000, length 0x7c000, prot 0x5, flags 0x812, fd 3, offset 0xe000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02600 @ offset 0xe000
+    2 vmap_remove_intersection: q [0x278d1d000 0x278d99000), r [0x278d0f000 0x278df6000)
+    2    returning 0x278d1d000
+    2 direct return: 10616950784, rsp 0xffe64a48
+    2 mmap
+    2 mmap: addr 0x0000000278d99000, length 0x5b000, prot 0x1, flags 0x812, fd 3, offset 0x8a000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02600 @ offset 0x8a000
+    2 vmap_remove_intersection: q [0x278d99000 0x278df4000), r [0x278d99000 0x278df6000)
+    2    returning 0x278d99000
+    2 direct return: 10617458688, rsp 0xffe64a48
+    2 mmap
+    2 mmap: addr 0x0000000278df4000, length 0x2000, prot 0x3, flags 0x812, fd 3, offset 0xe4000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02600 @ offset 0xe4000
+    2 vmap_remove_intersection: q [0x278df4000 0x278df6000), r [0x278d99000 0x278df6000)
+    2    returning 0x278df4000
+    2 direct return: 10617831424, rsp 0xffe64a48
+    2 close
+    2 close: fd 3
+    2 direct return: 0, rsp 0xffe64cb8
+    2 mmap
+    2 mmap: addr 0x0000000000000000, length 0x2000, prot 0x3, flags 0x22, fd -1, offset 0x0
+    2    returning 0x1217e7000
+    2 direct return: 4856901632, rsp 0xffe657f8
+    2 mmap
+    2 mmap: addr 0x0000000000000000, length 0x5000, prot 0x3, flags 0x22, fd -1, offset 0x0
+    2    returning 0x10bcee000
+    2 direct return: 4493074432, rsp 0xffe658e8
+    2 arch_prctl
+    2 arch_prctl: code 0x1002, addr 0x10bcf0000
+    2 direct return: 0, rsp 0xffe65930
+    2 set_tid_address
+    2 direct return: 2, rsp 0xffe65910
+    2 set_robust_list
+    2 set_robust_list syscall with head 0x000000010bcf02e0
+    2 direct return: 0, rsp 0xffe65910
+    2 syscall 334
+    2 nosyscall 334
+    2 mprotect
+    2 mprotect: addr 0x0000000517c13000, len 0x4000, prot 0x1
+    2 vmap_update_protections_locked: validate [0x517c13000 0x517c17000)
+    2 direct return: 0, rsp 0xffe65838
+    2 mprotect
+    2 mprotect: addr 0x0000000278df4000, len 0x1000, prot 0x1
+    2 vmap_update_protections_locked: validate [0x278df4000 0x278df5000)
+    2 direct return: 0, rsp 0xffe65838
+    2 mprotect
+    2 mprotect: addr 0x00000006411bd000, len 0x1000, prot 0x1
+    2 vmap_update_protections_locked: validate [0x6411bd000 0x6411be000)
+    2 direct return: 0, rsp 0xffe65838
+    2 mmap
+    2 mmap: addr 0x0000000000000000, length 0x2000, prot 0x3, flags 0x22, fd -1, offset 0x0
+    2    returning 0x10a3e1000
+    2 direct return: 4466806784, rsp 0xffe65638
+    2 mprotect
+    2 mprotect: addr 0x000000074e6f6000, len 0xb000, prot 0x1
+    2 vmap_update_protections_locked: validate [0x74e6f6000 0x74e701000)
+    2 direct return: 0, rsp 0xffe65838
+    2 mprotect
+    2 mprotect: addr 0x00000000005ca000, len 0x5000, prot 0x1
+    2 vmap_update_protections_locked: validate [0x5ca000 0x5cf000)
+    2 direct return: 0, rsp 0xffe65838
+    2 mprotect
+    2 mprotect: addr 0x0000028fd0d96000, len 0x2000, prot 0x1
+    2 vmap_update_protections_locked: validate [0x28fd0d96000 0x28fd0d98000)
+    2 direct return: 0, rsp 0xffe65838
+    2 prlimit64
+    2 prlimit64: pid 0, resource 3, new_limit 0x0000000000000000, old_limit 0x00000000ffe65920
+    2 getrlimit: resource 3, rlim 0x00000000ffe65920
+    2 direct return: 0, rsp 0xffe65918
+    2 getrandom
+    2 direct return: 8, rsp 0xffe65c88
+    2 brk
+    2 direct return: 7831552, rsp 0xffe65b38
+    2 brk
+    2 direct return: 7966720, rsp 0xffe65b38
+    2 futex
+    2 futex_wake [2 0x00000000005cfd84 2] 2147483647
+    2 direct return: 0, rsp 0xffe65ca0
+    2 futex
+    2 futex_wake [2 0x000000074e70477c 2] 2147483647
+    2 direct return: 0, rsp 0xffe65b10
+    2 newfstatat
+    2 fd 1, stat 0x00000000ffe55070
+    2 st_ino 0, st_mode 0x2000, st_size 0
+    2 direct return: 0, rsp 0xffe55068
+    2 write
+deviceQuery Starting...
+
+    2 direct return: 25, rsp 0xffe550f8
+    2 write
+ CUDA Device Query (Runtime API) version (CUDART static linking)
+    2 direct return: 65, rsp 0xffe55708
+    2 write
+
+    2 direct return: 1, rsp 0xffe55738
+    2 openat
+    2    fd 3, length 28392536, offset 0
+    2 direct return: 3, rsp 0xffe54548
+    2 read
+    2 file_read: f 0xffffc00000099cd0, dest 0x00000000ffe547d8, offset 0 (file), length 832, file length 28392536
+    2 sleep uninterruptible
+    2 file_read_complete: status (none)
+    2    read count 832
+    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
+    2 newfstatat
+    2 fd 3, stat 0x00000000ffe54670
+    2 st_ino ffff80c000000440, st_mode 0x81a4, st_size 1b13c58
+    2 direct return: 0, rsp 0xffe545c8
+    2 mmap
+    2 mmap: addr 0x0000000000000000, length 0x1b7ab60, prot 0x1, flags 0x802, fd 3, offset 0x0
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e03200 @ offset 0x0
+    2    returning 0x100a66000
+    2 direct return: 4305870848, rsp 0xffe543c8
+    2 mmap
+    2 mmap: addr 0x0000000100b41000, length 0x498000, prot 0x5, flags 0x812, fd 3, offset 0xdb000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e03200 @ offset 0xdb000
+    2 vmap_remove_intersection: q [0x100b41000 0x100fd9000), r [0x100a66000 0x1025e1000)
+    2    returning 0x100b41000
+    2 direct return: 4306767872, rsp 0xffe543c8
+    2 mmap
+    2 mmap: addr 0x0000000100fd9000, length 0x1490000, prot 0x1, flags 0x812, fd 3, offset 0x573000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e03200 @ offset 0x573000
+    2 vmap_remove_intersection: q [0x100fd9000 0x102469000), r [0x100fd9000 0x1025e1000)
+    2    returning 0x100fd9000
+    2 direct return: 4311584768, rsp 0xffe543c8
+    2 mmap
+    2 mmap: addr 0x0000000102469000, length 0x112000, prot 0x3, flags 0x812, fd 3, offset 0x1a02000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e03200 @ offset 0x1a02000
+    2 vmap_remove_intersection: q [0x102469000 0x10257b000), r [0x100fd9000 0x1025e1000)
+    2    returning 0x102469000
+    2 direct return: 4333146112, rsp 0xffe543c8
+    2 mmap
+    2 mmap: addr 0x000000010257b000, length 0x65b60, prot 0x3, flags 0x32, fd -1, offset 0x0
+    2 vmap_remove_intersection: q [0x10257b000 0x1025e1000), r [0x10257b000 0x1025e1000)
+    2    returning 0x10257b000
+    2 direct return: 4334268416, rsp 0xffe543c8
+    2 close
+    2 close: fd 3
+    2 direct return: 0, rsp 0xffe545c8
+    2 openat
+    2    fd 3, length 14432, offset 0
+    2 direct return: 3, rsp 0xffe53e88
+    2 read
+    2 file_read: f 0xffffc00000099e18, dest 0x00000000ffe54118, offset 0 (file), length 832, file length 14432
+    2 sleep uninterruptible
+    2 file_read_complete: status (none)
+    2    read count 832
+    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
+    2 newfstatat
+    2 fd 3, stat 0x00000000ffe53fb0
+    2 st_ino ffff80c000000900, st_mode 0x81a4, st_size 3860
+    2 direct return: 0, rsp 0xffe53f08
+    2 mmap
+    2 mmap: addr 0x0000000000000000, length 0x4028, prot 0x1, flags 0x802, fd 3, offset 0x0
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e03000 @ offset 0x0
+    2    returning 0x1001da000
+    2 direct return: 4296908800, rsp 0xffe53c98
+    2 mmap
+    2 mmap: addr 0x00000001001db000, length 0x1000, prot 0x5, flags 0x812, fd 3, offset 0x1000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e03000 @ offset 0x1000
+    2 vmap_remove_intersection: q [0x1001db000 0x1001dc000), r [0x1001da000 0x1001df000)
+    2    returning 0x1001db000
+    2 direct return: 4296912896, rsp 0xffe53c98
+    2 mmap
+    2 mmap: addr 0x00000001001dc000, length 0x1000, prot 0x1, flags 0x812, fd 3, offset 0x2000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e03000 @ offset 0x2000
+    2 vmap_remove_intersection: q [0x1001dc000 0x1001dd000), r [0x1001dc000 0x1001df000)
+    2    returning 0x1001dc000
+    2 direct return: 4296916992, rsp 0xffe53c98
+    2 mmap
+    2 mmap: addr 0x00000001001dd000, length 0x2000, prot 0x3, flags 0x812, fd 3, offset 0x2000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e03000 @ offset 0x2000
+    2 vmap_remove_intersection: q [0x1001dd000 0x1001df000), r [0x1001dc000 0x1001df000)
+    2    returning 0x1001dd000
+    2 direct return: 4296921088, rsp 0xffe53c98
+    2 close
+    2 close: fd 3
+    2 direct return: 0, rsp 0xffe53f08
+    2 openat
+    2    fd 3, length 21448, offset 0
+    2 direct return: 3, rsp 0xffe53e68
+    2 read
+    2 file_read: f 0xffffc000035ef000, dest 0x00000000ffe540f8, offset 0 (file), length 832, file length 21448
+    2 sleep uninterruptible
+    2 file_read_complete: status (none)
+    2    read count 832
+    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
+    2 newfstatat
+    2 fd 3, stat 0x00000000ffe53f90
+    2 st_ino ffff80c0000005c0, st_mode 0x81a4, st_size 53c8
+    2 direct return: 0, rsp 0xffe53ee8
+    2 mmap
+    2 mmap: addr 0x0000000000000000, length 0x4028, prot 0x1, flags 0x802, fd 3, offset 0x0
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02800 @ offset 0x0
+    2    returning 0x100140000
+    2 direct return: 4296278016, rsp 0xffe53c78
+    2 mmap
+    2 mmap: addr 0x0000000100141000, length 0x1000, prot 0x5, flags 0x812, fd 3, offset 0x1000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02800 @ offset 0x1000
+    2 vmap_remove_intersection: q [0x100141000 0x100142000), r [0x100140000 0x100145000)
+    2    returning 0x100141000
+    2 direct return: 4296282112, rsp 0xffe53c78
+    2 mmap
+    2 mmap: addr 0x0000000100142000, length 0x1000, prot 0x1, flags 0x812, fd 3, offset 0x2000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02800 @ offset 0x2000
+    2 vmap_remove_intersection: q [0x100142000 0x100143000), r [0x100142000 0x100145000)
+    2    returning 0x100142000
+    2 direct return: 4296286208, rsp 0xffe53c78
+    2 mmap
+    2 mmap: addr 0x0000000100143000, length 0x2000, prot 0x3, flags 0x812, fd 3, offset 0x2000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02800 @ offset 0x2000
+    2 vmap_remove_intersection: q [0x100143000 0x100145000), r [0x100142000 0x100145000)
+    2    returning 0x100143000
+    2 direct return: 4296290304, rsp 0xffe53c78
+    2 close
+    2 close: fd 3
+    2 direct return: 0, rsp 0xffe53ee8
+    2 openat
+    2    fd 3, length 14664, offset 0
+    2 direct return: 3, rsp 0xffe53e48
+    2 read
+    2 file_read: f 0xffffc000035ef148, dest 0x00000000ffe540d8, offset 0 (file), length 832, file length 14664
+    2 sleep uninterruptible
+    2 file_read_complete: status (none)
+    2    read count 832
+    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
+    2 newfstatat
+    2 fd 3, stat 0x00000000ffe53f70
+    2 st_ino ffff80c000000680, st_mode 0x81a4, st_size 3948
+    2 direct return: 0, rsp 0xffe53ec8
+    2 mmap
+    2 mmap: addr 0x0000000000000000, length 0x4038, prot 0x1, flags 0x802, fd 3, offset 0x0
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02e00 @ offset 0x0
+    2    returning 0x100061000
+    2 direct return: 4295364608, rsp 0xffe53c58
+    2 mmap
+    2 mmap: addr 0x0000000100062000, length 0x1000, prot 0x5, flags 0x812, fd 3, offset 0x1000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02e00 @ offset 0x1000
+    2 vmap_remove_intersection: q [0x100062000 0x100063000), r [0x100061000 0x100066000)
+    2    returning 0x100062000
+    2 direct return: 4295368704, rsp 0xffe53c58
+    2 mmap
+    2 mmap: addr 0x0000000100063000, length 0x1000, prot 0x1, flags 0x812, fd 3, offset 0x2000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02e00 @ offset 0x2000
+    2 vmap_remove_intersection: q [0x100063000 0x100064000), r [0x100063000 0x100066000)
+    2    returning 0x100063000
+    2 direct return: 4295372800, rsp 0xffe53c58
+    2 mmap
+    2 mmap: addr 0x0000000100064000, length 0x2000, prot 0x3, flags 0x812, fd 3, offset 0x2000
+    2    fd 3: file-backed (regular)
+    2    associated with cache node 0xffffc00000e02e00 @ offset 0x2000
+    2 vmap_remove_intersection: q [0x100064000 0x100066000), r [0x100063000 0x100066000)
+    2    returning 0x100064000
+    2 direct return: 4295376896, rsp 0xffe53c58
+    2 close
+    2 close: fd 3
+    2 direct return: 0, rsp 0xffe53ec8
+    2 mprotect
+    2 mprotect: addr 0x0000000100064000, len 0x1000, prot 0x1
+    2 vmap_update_protections_locked: validate [0x100064000 0x100065000)
+    2 direct return: 0, rsp 0xffe54a48
+    2 mprotect
+    2 mprotect: addr 0x0000000100143000, len 0x1000, prot 0x1
+    2 vmap_update_protections_locked: validate [0x100143000 0x100144000)
+    2 direct return: 0, rsp 0xffe54a48
+    2 mprotect
+    2 mprotect: addr 0x00000001001dd000, len 0x1000, prot 0x1
+    2 vmap_update_protections_locked: validate [0x1001dd000 0x1001de000)
+    2 direct return: 0, rsp 0xffe54a48
+    2 mprotect
+    2 mprotect: addr 0x0000000102469000, len 0x17000, prot 0x1
+    2 vmap_update_protections_locked: validate [0x102469000 0x102480000)
+    2 direct return: 0, rsp 0xffe54a48
+    2 sched_get_priority_max
+    2 nosyscall sched_get_priority_max
+    2 sched_get_priority_min
+    2 nosyscall sched_get_priority_min
+    2 getpid
+    2 direct return: 2, rsp 0xffe55028
+    2 openat
+    2 spec_open: /sys/devices/system/cpu/online
+    2    fd 3, length 0, offset 0
+    2 direct return: 3, rsp 0xffe54a70
+    2 read
+    2 spec_read: /sys/devices/system/cpu/online
+    2 direct return: 5, rsp 0xffe54ac8
+    2 close
+    2 close: fd 3
+    2 spec_close: /sys/devices/system/cpu/online
+    2 direct return: 0, rsp 0xffe54ac8
+    2 openat
+    2 spec_open: /sys/devices/system/cpu/online
+    2    fd 3, length 0, offset 0
+    2 direct return: 3, rsp 0xffe54a70
+    2 read
+    2 spec_read: /sys/devices/system/cpu/online
+    2 direct return: 5, rsp 0xffe54ac8
+    2 close
+    2 close: fd 3
+    2 spec_close: /sys/devices/system/cpu/online
+    2 direct return: 0, rsp 0xffe54ac8
+    2 mmap
+    2 mmap: addr 0x0000000000000000, length 0x21000, prot 0x3, flags 0x22, fd -1, offset 0x0
+    2    returning 0x100029000
+    2 direct return: 4295135232, rsp 0xffe54e18
+    2 sched_getaffinity
+    2 direct return: 8, rsp 0xffe54fa8
+    2 munmap
+    2 munmap: addr 0x0000000100029000, size 0x21000
+    2 vmap_remove_intersection: q [0x100029000 0x10004a000), r [0x100029000 0x10004a000)
+    2 direct return: 0, rsp 0xffe54f78
+    2 openat
+    2 "/proc/sys/vm/mmap_min_addr" - not found
+    2 direct return: -2, rsp 0xffe54e70
+    2 openat
+    2 "/proc/cpuinfo" - not found
+    2 direct return: -2, rsp 0xffe54e70
+    2 openat
+    2 spec_open: /proc/self/maps
+    2    fd 3, length 0, offset 0
+    2 direct return: 3, rsp 0xffe54de0
+    2 brk
+    2 direct return: 8122368, rsp 0xffe54d78
+    2 newfstatat
+    2 fd 3, stat 0x00000000ffe54d90
+    2 st_ino ffff80c000001b40, st_mode 0x2000, st_size 0
+    2 direct return: 0, rsp 0xffe54d88
+    2 ioctl
+    2 ioctl: fd 3, request 0x5401
+    2 direct return: -38, rsp 0xffe54cf0
+    2 read
+    2 spec_read: /proc/self/maps
+    2 direct return: 3543, rsp 0xffe54e68
+    2 read
+    2 spec_read: /proc/self/maps
+    2 direct return: 0, rsp 0xffe54e68
+    2 close
+    2 close: fd 3
+    2 spec_close: /proc/self/maps
+    2 direct return: 0, rsp 0xffe54ed8
+    2 openat
+    2 spec_open: /sys/devices/system/cpu/online
+    2    fd 3, length 0, offset 0
+    2 direct return: 3, rsp 0xffe54b60
+    2 read
+    2 spec_read: /sys/devices/system/cpu/online
+    2 direct return: 5, rsp 0xffe54bb8
+    2 close
+    2 close: fd 3
+    2 spec_close: /sys/devices/system/cpu/online
+    2 direct return: 0, rsp 0xffe54bb8
+    2 getpid
+    2 direct return: 2, rsp 0xffe54f18
+    2 eventfd2
+    2 direct return: 3, rsp 0xffe54ec8
+    2 fcntl
+    2 fcntl: fd 3, cmd 4, arg 2048
+    2 fcntl: fd 3, F_SETFL, 800
+    2 direct return: 0, rsp 0xffe54e40
+    2 rt_sigaction
+    2 direct return: 0, rsp 0xffe54bd0
+    2 rt_sigprocmask
+    2 direct return: 0, rsp 0xffe54d20
+    2 mmap
+    2 mmap: addr 0x0000000000000000, length 0x201000, prot 0x0, flags 0x20022, fd -1, offset 0x0
+    2    returning 0x1007ae000
+    2 direct return: 4303020032, rsp 0xffe54d18
+    2 mprotect
+    2 mprotect: addr 0x00000001007af000, len 0x200000, prot 0x3
+    2 vmap_update_protections_locked: validate [0x1007af000 0x1009af000)
+    2 direct return: 0, rsp 0xffe54d18
+    2 rt_sigprocmask
+    2 direct return: 0, rsp 0xffe54d20
+    2 clone3
+    2 clone3: args_size: 88, pidfd: 0x00000001009ae2d0, child_tid: 0x00000001009ae2d0, parent_tid: 0x00000001009ae2d0, exit_signal: 0, stack: 0x00000001007ae000, stack_size: 0x1fd9c0, tls: 0x00000001009ae000
+    2 direct return: 3, rsp 0xffe54c48
+        3 set_robust_list
+    2 rt_sigprocmask
+        3 set_robust_list syscall with head 0x00000001009ae2e0
+    2 direct return: 0, rsp 0xffe54d20
+        3 direct return: 0, rsp 0x1009ab920
+    2 pipe2
+        3 rt_sigprocmask
+    2 direct return: 0, rsp 0xffe54f18
+        3 direct return: 0, rsp 0x1009ab920
+    2 pipe2
+        3 gettid
+    2 direct return: 0, rsp 0xffe54f18
+        3 direct return: 3, rsp 0x1009ab8e8
+        3 mmap
+        3 mmap: addr 0x0000000000000000, length 0x8000000, prot 0x0, flags 0x4022, fd -1, offset 0x0
+        3    returning 0x110382000
+        3 direct return: 4567080960, rsp 0x1009ab6c8
+        3 munmap
+    2 openat
+        3 munmap: addr 0x0000000110382000, size 0x3c7e000
+    2 "/proc/self/task/3/comm" - not found
+        3 vmap_remove_intersection: q [0x110382000 0x114000000), r [0x110382000 0x118382000)
+    2 direct return: -2, rsp 0xffe54db0
+        3 direct return: 0, rsp 0x1009ab6c8
+    2 close
+        3 munmap
+    2 close: fd 6
+        3 munmap: addr 0x0000000118000000, size 0x382000
+    2 direct return: 0, rsp 0xffe54f20
+        3 vmap_remove_intersection: q [0x118000000 0x118382000), r [0x114000000 0x118382000)
+    2 close
+        3 direct return: 0, rsp 0x1009ab6c8
+    2 close: fd 5
+        3 mprotect
+    2 direct return: 0, rsp 0xffe54f20
+        3 mprotect: addr 0x0000000114000000, len 0x21000, prot 0x3
+    2 close
+        3 vmap_update_protections_locked: validate [0x114000000 0x114021000)
+    2 close: fd 4
+        3 direct return: 0, rsp 0x1009ab6c8
+    2 direct return: 0, rsp 0xffe54f20
+        3 poll
+    2 close
+        3 sleep interruptible (on "thread")
+    2 close: fd 7
+    2 direct return: 0, rsp 0xffe54f20
+    2 munmap
+    2 munmap: addr 0x0000000100a66000, size 0x1b7ab60
+    2 vmap_remove_intersection: q [0x100a66000 0x1025e1000), r [0x100a66000 0x100b41000)
+    2 vmap_remove_intersection: q [0x100a66000 0x1025e1000), r [0x100b41000 0x100fd9000)
+    2 vmap_remove_intersection: q [0x100a66000 0x1025e1000), r [0x100fd9000 0x102469000)
+    2 vmap_remove_intersection: q [0x100a66000 0x1025e1000), r [0x102469000 0x102480000)
+    2 vmap_remove_intersection: q [0x100a66000 0x1025e1000), r [0x102480000 0x10257b000)
+    2 vmap_remove_intersection: q [0x100a66000 0x1025e1000), r [0x10257b000 0x1025e1000)
+    2 direct return: 0, rsp 0xffe54e18
+    2 munmap
+    2 munmap: addr 0x00000001001da000, size 0x4028
+    2 vmap_remove_intersection: q [0x1001da000 0x1001df000), r [0x1001da000 0x1001db000)
+    2 vmap_remove_intersection: q [0x1001da000 0x1001df000), r [0x1001db000 0x1001dc000)
+    2 vmap_remove_intersection: q [0x1001da000 0x1001df000), r [0x1001dc000 0x1001dd000)
+    2 vmap_remove_intersection: q [0x1001da000 0x1001df000), r [0x1001dd000 0x1001de000)
+    2 vmap_remove_intersection: q [0x1001da000 0x1001df000), r [0x1001de000 0x1001df000)
+    2 direct return: 0, rsp 0xffe54e18
+    2 munmap
+    2 munmap: addr 0x0000000100140000, size 0x4028
+    2 vmap_remove_intersection: q [0x100140000 0x100145000), r [0x100140000 0x100141000)
+    2 vmap_remove_intersection: q [0x100140000 0x100145000), r [0x100141000 0x100142000)
+    2 vmap_remove_intersection: q [0x100140000 0x100145000), r [0x100142000 0x100143000)
+    2 vmap_remove_intersection: q [0x100140000 0x100145000), r [0x100143000 0x100144000)
+    2 vmap_remove_intersection: q [0x100140000 0x100145000), r [0x100144000 0x100145000)
+    2 direct return: 0, rsp 0xffe54e18
+    2 futex
+    2 futex_wake [2 0x00000000005cfd90 2] 2147483647
+    2 direct return: 0, rsp 0xffe55680
+    2 write
+cudaGetDeviceCount returned 304
+    2 direct return: 32, rsp 0xffe550d0
+    2 write
+-> OS call failed or operation not supported on this OS
+    2 direct return: 56, rsp 0xffe550d0
+    2 write
+Result = FAIL
+    2 direct return: 14, rsp 0xffe55710
+    2 exit_group

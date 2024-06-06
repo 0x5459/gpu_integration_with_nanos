@@ -1,720 +1,1371 @@
-NVRM _sysCreateOs: RM Access Sys Cap creation failed: 0x56
-NVRM: loading NVIDIA UNIX Open Kernel Module for x86_64  535.113.01  Release Build  (root@ipfs)  Tue Jun  4 01:42:09 PM CST 2024
-Loaded the UVM driver, major device number 0.
-    2 brk
-    2 direct return: 7831552, rsp 0xffe65c18
-    2 arch_prctl
-    2 arch_prctl: code 0x3001, addr 0xffe65bc0
-    2 direct return: -22, rsp 0xffe65b10
-    2 uname
-    2 direct return: 0, rsp 0xffe65758
-    2 mmap
-    2 mmap: addr 0x0000000000000000, length 0x2000, prot 0x3, flags 0x22, fd -1, offset 0x0
-    2    returning 0x48be979000
-    2 direct return: 312435249152, rsp 0xffe658b8
-    2 access
-    2 access: "/etc/ld.so.preload", mode 4
-    2 direct return: -2, rsp 0xffe65948
-    2 openat
-    2 "/etc/ld.so.cache" - not found
-    2 direct return: -2, rsp 0xffe64d08
-    2 openat
-    2 "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3/libstdc++.so.6" - not found
-    2 direct return: -2, rsp 0xffe64cb8
-    2 newfstatat
-    2 stat: cwd 0xffff80c000000040, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3", follow, buf 0x00000000ffe64de0
-    2 direct return: -2, rsp 0xffe64d18
-    2 openat
-    2 "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2/libstdc++.so.6" - not found
-    2 direct return: -2, rsp 0xffe64cb8
-    2 newfstatat
-    2 stat: cwd 0xffff80c000000040, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2", follow, buf 0x00000000ffe64de0
-    2 direct return: -2, rsp 0xffe64d18
-    2 openat
-    2 "/lib/x86_64-linux-gnu/tls/x86_64/libstdc++.so.6" - not found
-    2 direct return: -2, rsp 0xffe64cb8
-    2 newfstatat
-    2 stat: cwd 0xffff80c000000040, "/lib/x86_64-linux-gnu/tls/x86_64", follow, buf 0x00000000ffe64de0
-    2 direct return: -2, rsp 0xffe64d18
-    2 openat
-    2 "/lib/x86_64-linux-gnu/tls/libstdc++.so.6" - not found
-    2 direct return: -2, rsp 0xffe64cb8
-    2 newfstatat
-    2 stat: cwd 0xffff80c000000040, "/lib/x86_64-linux-gnu/tls", follow, buf 0x00000000ffe64de0
-    2 direct return: -2, rsp 0xffe64d18
-    2 openat
-    2 "/lib/x86_64-linux-gnu/x86_64/libstdc++.so.6" - not found
-    2 direct return: -2, rsp 0xffe64cb8
-    2 newfstatat
-    2 stat: cwd 0xffff80c000000040, "/lib/x86_64-linux-gnu/x86_64", follow, buf 0x00000000ffe64de0
-    2 direct return: -2, rsp 0xffe64d18
-    2 openat
-    2    fd 3, length 2260296, offset 0
-    2 direct return: 3, rsp 0xffe64cb8
-    2 read
-    2 file_read: f 0xffffc000000997b0, dest 0x00000000ffe64f48, offset 0 (file), length 832, file length 2260296
-    2 sleep uninterruptible
-    2 file_read_complete: status (none)
-    2    read count 832
-    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
-    2 newfstatat
-    2 fd 3, stat 0x00000000ffe64de0
-    2 st_ino ffff80c000000a80, st_mode 0x81a4, st_size 227d48
-    2 direct return: 0, rsp 0xffe64d38
-    2 mmap
-    2 mmap: addr 0x0000000000000000, length 0x22b8c0, prot 0x1, flags 0x802, fd 3, offset 0x0
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02a00 @ offset 0x0
-    2    returning 0x74e4db000
-    2 direct return: 31378485248, rsp 0xffe64a98
-    2 mprotect
-    2 mprotect: addr 0x000000074e575000, len 0x181000, prot 0x0
-    2 vmap_update_protections_locked: validate [0x74e575000 0x74e6f6000)
-    2 direct return: 0, rsp 0xffe64a98
-    2 mmap
-    2 mmap: addr 0x000000074e575000, length 0x111000, prot 0x5, flags 0x812, fd 3, offset 0x9a000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02a00 @ offset 0x9a000
-    2 vmap_remove_intersection: q [0x74e575000 0x74e686000), r [0x74e4db000 0x74e707000)
-    2    returning 0x74e575000
-    2 direct return: 31379116032, rsp 0xffe64a98
-    2 mmap
-    2 mmap: addr 0x000000074e686000, length 0x6f000, prot 0x1, flags 0x812, fd 3, offset 0x1ab000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02a00 @ offset 0x1ab000
-    2 vmap_remove_intersection: q [0x74e686000 0x74e6f5000), r [0x74e686000 0x74e707000)
-    2    returning 0x74e686000
-    2 direct return: 31380234240, rsp 0xffe64a98
-    2 mmap
-    2 mmap: addr 0x000000074e6f6000, length 0xe000, prot 0x3, flags 0x812, fd 3, offset 0x21a000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02a00 @ offset 0x21a000
-    2 vmap_remove_intersection: q [0x74e6f6000 0x74e704000), r [0x74e686000 0x74e707000)
-    2    returning 0x74e6f6000
-    2 direct return: 31380692992, rsp 0xffe64a98
-    2 mmap
-    2 mmap: addr 0x000000074e704000, length 0x28c0, prot 0x3, flags 0x32, fd -1, offset 0x0
-    2 vmap_remove_intersection: q [0x74e704000 0x74e707000), r [0x74e704000 0x74e707000)
-    2    returning 0x74e704000
-    2 direct return: 31380750336, rsp 0xffe64a98
-    2 close
-    2 close: fd 3
-    2 direct return: 0, rsp 0xffe64d38
-    2 openat
-    2    fd 3, length 125488, offset 0
-    2 direct return: 3, rsp 0xffe64c98
-    2 read
-    2 file_read: f 0xffffc000000998f8, dest 0x00000000ffe64f28, offset 0 (file), length 832, file length 125488
-    2 sleep uninterruptible
-    2 file_read_complete: status (none)
-    2    read count 832
-    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
-    2 newfstatat
-    2 fd 3, stat 0x00000000ffe64dc0
-    2 st_ino ffff80c000000500, st_mode 0x81a4, st_size 1ea30
-    2 direct return: 0, rsp 0xffe64d18
-    2 mmap
-    2 mmap: addr 0x0000000000000000, length 0x1f2e8, prot 0x1, flags 0x802, fd 3, offset 0x0
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02c00 @ offset 0x0
-    2    returning 0x64119f000
-    2 direct return: 26862022656, rsp 0xffe64aa8
-    2 mmap
-    2 mmap: addr 0x00000006411a2000, length 0x17000, prot 0x5, flags 0x812, fd 3, offset 0x3000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02c00 @ offset 0x3000
-    2 vmap_remove_intersection: q [0x6411a2000 0x6411b9000), r [0x64119f000 0x6411bf000)
-    2    returning 0x6411a2000
-    2 direct return: 26862034944, rsp 0xffe64aa8
-    2 mmap
-    2 mmap: addr 0x00000006411b9000, length 0x4000, prot 0x1, flags 0x812, fd 3, offset 0x1a000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02c00 @ offset 0x1a000
-    2 vmap_remove_intersection: q [0x6411b9000 0x6411bd000), r [0x6411b9000 0x6411bf000)
-    2    returning 0x6411b9000
-    2 direct return: 26862129152, rsp 0xffe64aa8
-    2 mmap
-    2 mmap: addr 0x00000006411bd000, length 0x2000, prot 0x3, flags 0x812, fd 3, offset 0x1d000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02c00 @ offset 0x1d000
-    2 vmap_remove_intersection: q [0x6411bd000 0x6411bf000), r [0x6411b9000 0x6411bf000)
-    2    returning 0x6411bd000
-    2 direct return: 26862145536, rsp 0xffe64aa8
-    2 close
-    2 close: fd 3
-    2 direct return: 0, rsp 0xffe64d18
-    2 openat
-    2    fd 3, length 2220400, offset 0
-    2 direct return: 3, rsp 0xffe64c78
-    2 read
-    2 file_read: f 0xffffc00000099a40, dest 0x00000000ffe64f08, offset 0 (file), length 832, file length 2220400
-    2 sleep uninterruptible
-    2 file_read_complete: status (none)
-    2    read count 832
-    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
-    2 pread64
-    2 file_read: f 0xffffc00000099a40, dest 0x00000000ffe64960, offset 64 (specified), length 784, file length 2220400
-    2 sleep uninterruptible
-    2 file_read_complete: status (none)
-    2    read count 784
-    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b9e
-    2 pread64
-    2 file_read: f 0xffffc00000099a40, dest 0x00000000ffe64920, offset 848 (specified), length 48, file length 2220400
-    2 sleep uninterruptible
-    2 file_read_complete: status (none)
-    2    read count 48
-    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b9e
-    2 pread64
-    2 file_read: f 0xffffc00000099a40, dest 0x00000000ffe648d0, offset 896 (specified), length 68, file length 2220400
-    2 sleep uninterruptible
-    2 file_read_complete: status (none)
-    2    read count 68
-    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b9e
-    2 newfstatat
-    2 fd 3, stat 0x00000000ffe64da0
-    2 st_ino ffff80c000000800, st_mode 0x81a4, st_size 21e170
-    2 direct return: 0, rsp 0xffe64cf8
-    2 pread64
-    2 file_read: f 0xffffc00000099a40, dest 0x00000000ffe649e0, offset 64 (specified), length 784, file length 2220400
-    2 sleep uninterruptible
-    2 file_read_complete: status (none)
-    2    read count 784
-    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b9e
-    2 mmap
-    2 mmap: addr 0x0000000000000000, length 0x228e50, prot 0x1, flags 0x802, fd 3, offset 0x0
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02200 @ offset 0x0
-    2    returning 0x5179fd000
-    2 direct return: 21871185920, rsp 0xffe646c8
-    2 mprotect
-    2 mprotect: addr 0x0000000517a25000, len 0x1ee000, prot 0x0
-    2 vmap_update_protections_locked: validate [0x517a25000 0x517c13000)
-    2 direct return: 0, rsp 0xffe646c8
-    2 mmap
-    2 mmap: addr 0x0000000517a25000, length 0x195000, prot 0x5, flags 0x812, fd 3, offset 0x28000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02200 @ offset 0x28000
-    2 vmap_remove_intersection: q [0x517a25000 0x517bba000), r [0x5179fd000 0x517c26000)
-    2    returning 0x517a25000
-    2 direct return: 21871349760, rsp 0xffe646c8
-    2 mmap
-    2 mmap: addr 0x0000000517bba000, length 0x58000, prot 0x1, flags 0x812, fd 3, offset 0x1bd000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02200 @ offset 0x1bd000
-    2 vmap_remove_intersection: q [0x517bba000 0x517c12000), r [0x517bba000 0x517c26000)
-    2    returning 0x517bba000
-    2 direct return: 21873008640, rsp 0xffe646c8
-    2 mmap
-    2 mmap: addr 0x0000000517c13000, length 0x6000, prot 0x3, flags 0x812, fd 3, offset 0x215000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02200 @ offset 0x215000
-    2 vmap_remove_intersection: q [0x517c13000 0x517c19000), r [0x517bba000 0x517c26000)
-    2    returning 0x517c13000
-    2 direct return: 21873373184, rsp 0xffe646c8
-    2 mmap
-    2 mmap: addr 0x0000000517c19000, length 0xce50, prot 0x3, flags 0x32, fd -1, offset 0x0
-    2 vmap_remove_intersection: q [0x517c19000 0x517c26000), r [0x517c19000 0x517c26000)
-    2    returning 0x517c19000
-    2 direct return: 21873397760, rsp 0xffe646c8
-    2 close
-    2 close: fd 3
-    2 direct return: 0, rsp 0xffe649d8
-    2 openat
-    2    fd 3, length 940560, offset 0
-    2 direct return: 3, rsp 0xffe64c38
-    2 read
-    2 file_read: f 0xffffc00000099b88, dest 0x00000000ffe64ec8, offset 0 (file), length 832, file length 940560
-    2 sleep uninterruptible
-    2 file_read_complete: status (none)
-    2    read count 832
-    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
-    2 newfstatat
-    2 fd 3, stat 0x00000000ffe64d60
-    2 st_ino ffff80c0000009c0, st_mode 0x81a4, st_size e5a10
-    2 direct return: 0, rsp 0xffe64cb8
-    2 mmap
-    2 mmap: addr 0x0000000000000000, length 0xe6108, prot 0x1, flags 0x802, fd 3, offset 0x0
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02600 @ offset 0x0
-    2    returning 0x278d0f000
-    2 direct return: 10616893440, rsp 0xffe64a48
-    2 mmap
-    2 mmap: addr 0x0000000278d1d000, length 0x7c000, prot 0x5, flags 0x812, fd 3, offset 0xe000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02600 @ offset 0xe000
-    2 vmap_remove_intersection: q [0x278d1d000 0x278d99000), r [0x278d0f000 0x278df6000)
-    2    returning 0x278d1d000
-    2 direct return: 10616950784, rsp 0xffe64a48
-    2 mmap
-    2 mmap: addr 0x0000000278d99000, length 0x5b000, prot 0x1, flags 0x812, fd 3, offset 0x8a000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02600 @ offset 0x8a000
-    2 vmap_remove_intersection: q [0x278d99000 0x278df4000), r [0x278d99000 0x278df6000)
-    2    returning 0x278d99000
-    2 direct return: 10617458688, rsp 0xffe64a48
-    2 mmap
-    2 mmap: addr 0x0000000278df4000, length 0x2000, prot 0x3, flags 0x812, fd 3, offset 0xe4000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02600 @ offset 0xe4000
-    2 vmap_remove_intersection: q [0x278df4000 0x278df6000), r [0x278d99000 0x278df6000)
-    2    returning 0x278df4000
-    2 direct return: 10617831424, rsp 0xffe64a48
-    2 close
-    2 close: fd 3
-    2 direct return: 0, rsp 0xffe64cb8
-    2 mmap
-    2 mmap: addr 0x0000000000000000, length 0x2000, prot 0x3, flags 0x22, fd -1, offset 0x0
-    2    returning 0x1217e7000
-    2 direct return: 4856901632, rsp 0xffe657f8
-    2 mmap
-    2 mmap: addr 0x0000000000000000, length 0x5000, prot 0x3, flags 0x22, fd -1, offset 0x0
-    2    returning 0x10bcee000
-    2 direct return: 4493074432, rsp 0xffe658e8
-    2 arch_prctl
-    2 arch_prctl: code 0x1002, addr 0x10bcf0000
-    2 direct return: 0, rsp 0xffe65930
-    2 set_tid_address
-    2 direct return: 2, rsp 0xffe65910
-    2 set_robust_list
-    2 set_robust_list syscall with head 0x000000010bcf02e0
-    2 direct return: 0, rsp 0xffe65910
-    2 syscall 334
-    2 nosyscall 334
-    2 mprotect
-    2 mprotect: addr 0x0000000517c13000, len 0x4000, prot 0x1
-    2 vmap_update_protections_locked: validate [0x517c13000 0x517c17000)
-    2 direct return: 0, rsp 0xffe65838
-    2 mprotect
-    2 mprotect: addr 0x0000000278df4000, len 0x1000, prot 0x1
-    2 vmap_update_protections_locked: validate [0x278df4000 0x278df5000)
-    2 direct return: 0, rsp 0xffe65838
-    2 mprotect
-    2 mprotect: addr 0x00000006411bd000, len 0x1000, prot 0x1
-    2 vmap_update_protections_locked: validate [0x6411bd000 0x6411be000)
-    2 direct return: 0, rsp 0xffe65838
-    2 mmap
-    2 mmap: addr 0x0000000000000000, length 0x2000, prot 0x3, flags 0x22, fd -1, offset 0x0
-    2    returning 0x10a3e1000
-    2 direct return: 4466806784, rsp 0xffe65638
-    2 mprotect
-    2 mprotect: addr 0x000000074e6f6000, len 0xb000, prot 0x1
-    2 vmap_update_protections_locked: validate [0x74e6f6000 0x74e701000)
-    2 direct return: 0, rsp 0xffe65838
-    2 mprotect
-    2 mprotect: addr 0x00000000005ca000, len 0x5000, prot 0x1
-    2 vmap_update_protections_locked: validate [0x5ca000 0x5cf000)
-    2 direct return: 0, rsp 0xffe65838
-    2 mprotect
-    2 mprotect: addr 0x0000028fd0d96000, len 0x2000, prot 0x1
-    2 vmap_update_protections_locked: validate [0x28fd0d96000 0x28fd0d98000)
-    2 direct return: 0, rsp 0xffe65838
-    2 prlimit64
-    2 prlimit64: pid 0, resource 3, new_limit 0x0000000000000000, old_limit 0x00000000ffe65920
-    2 getrlimit: resource 3, rlim 0x00000000ffe65920
-    2 direct return: 0, rsp 0xffe65918
-    2 getrandom
-    2 direct return: 8, rsp 0xffe65c88
-    2 brk
-    2 direct return: 7831552, rsp 0xffe65b38
-    2 brk
-    2 direct return: 7966720, rsp 0xffe65b38
-    2 futex
-    2 futex_wake [2 0x00000000005cfd84 2] 2147483647
-    2 direct return: 0, rsp 0xffe65ca0
-    2 futex
-    2 futex_wake [2 0x000000074e70477c 2] 2147483647
-    2 direct return: 0, rsp 0xffe65b10
-    2 newfstatat
-    2 fd 1, stat 0x00000000ffe55070
-    2 st_ino 0, st_mode 0x2000, st_size 0
-    2 direct return: 0, rsp 0xffe55068
-    2 write
-deviceQuery Starting...
+root@ipfs:/home/qiaokun/code/gevulot-fil# strace -f ./deviceQuery
+execve("./deviceQuery", ["./deviceQuery"], 0x7ffef3a5fe68 /* 26 vars */) = 0
+brk(NULL)                               = 0x55c71ea26000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe56fc1430) = -1 EINVAL (Invalid argument)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4e0096000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/glibc-hwcaps/x86-64-v3/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/glibc-hwcaps/x86-64-v3", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/glibc-hwcaps/x86-64-v2/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/glibc-hwcaps/x86-64-v2", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/tls/x86_64/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/tls/x86_64/x86_64", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/tls/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/tls/x86_64", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/tls/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/tls/x86_64", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/tls", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/x86_64/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/x86_64/x86_64", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/x86_64", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/x86_64", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-12.4/lib64", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/glibc-hwcaps/x86-64-v3/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/glibc-hwcaps/x86-64-v3", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/glibc-hwcaps/x86-64-v2/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/glibc-hwcaps/x86-64-v2", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/tls/x86_64/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/tls/x86_64/x86_64", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/tls/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/tls/x86_64", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/tls/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/tls/x86_64", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/tls", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/x86_64/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/x86_64/x86_64", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/x86_64", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/x86_64", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/local/cuda-11.7/lib64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/cuda-11.7/lib64", 0x7ffe56fc0650, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v3/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v2/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=47743, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 47743, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fc4e008a000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2260296, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 2275520, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc4dfe5e000
+mprotect(0x7fc4dfef8000, 1576960, PROT_NONE) = 0
+mmap(0x7fc4dfef8000, 1118208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9a000) = 0x7fc4dfef8000
+mmap(0x7fc4e0009000, 454656, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ab000) = 0x7fc4e0009000
+mmap(0x7fc4e0079000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x21a000) = 0x7fc4e0079000
+mmap(0x7fc4e0087000, 10432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fc4e0087000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v3/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v2/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/x86_64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/x86_64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=125488, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 127720, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc4dfe3e000
+mmap(0x7fc4dfe41000, 94208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fc4dfe41000
+mmap(0x7fc4dfe58000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x7fc4dfe58000
+mmap(0x7fc4dfe5c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d000) = 0x7fc4dfe5c000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v3/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0I\17\357\204\3$\f\221\2039x\324\224\323\236S"..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc4dfc15000
+mprotect(0x7fc4dfc3d000, 2023424, PROT_NONE) = 0
+mmap(0x7fc4dfc3d000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7fc4dfc3d000
+mmap(0x7fc4dfdd2000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7fc4dfdd2000
+mmap(0x7fc4dfe2b000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7fc4dfe2b000
+mmap(0x7fc4dfe31000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fc4dfe31000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v3/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v2/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc4dfb2e000
+mmap(0x7fc4dfb3c000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7fc4dfb3c000
+mmap(0x7fc4dfbb8000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x7fc4dfbb8000
+mmap(0x7fc4dfc13000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x7fc4dfc13000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4dfb2c000
+mmap(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4dfb27000
+arch_prctl(ARCH_SET_FS, 0x7fc4dfb29000) = 0
+set_tid_address(0x7fc4dfb292d0)         = 550285
+set_robust_list(0x7fc4dfb292e0, 24)     = 0
+rseq(0x7fc4dfb299a0, 0x20, 0, 0x53053053) = 0
+mprotect(0x7fc4dfe2b000, 16384, PROT_READ) = 0
+mprotect(0x7fc4dfc13000, 4096, PROT_READ) = 0
+mprotect(0x7fc4dfe5c000, 4096, PROT_READ) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4dfb25000
+mprotect(0x7fc4e0079000, 45056, PROT_READ) = 0
+mprotect(0x55c71d0df000, 20480, PROT_READ) = 0
+mprotect(0x7fc4e00d0000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7fc4e008a000, 47743)           = 0
+getrandom("\x01\x1c\x3d\x49\xf4\xcc\xe6\xbc", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x55c71ea26000
+brk(0x55c71ea47000)                     = 0x55c71ea47000
+futex(0x55c71d0e4d84, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7fc4e008777c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+newfstatat(1, "", {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+write(1, "./deviceQuery Starting...\n\n", 27./deviceQuery Starting...
 
-    2 direct return: 25, rsp 0xffe550f8
-    2 write
- CUDA Device Query (Runtime API) version (CUDART static linking)
-    2 direct return: 65, rsp 0xffe55708
-    2 write
-
-    2 direct return: 1, rsp 0xffe55738
-    2 openat
-    2    fd 3, length 28392536, offset 0
-    2 direct return: 3, rsp 0xffe54548
-    2 read
-    2 file_read: f 0xffffc00000099cd0, dest 0x00000000ffe547d8, offset 0 (file), length 832, file length 28392536
-    2 sleep uninterruptible
-    2 file_read_complete: status (none)
-    2    read count 832
-    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
-    2 newfstatat
-    2 fd 3, stat 0x00000000ffe54670
-    2 st_ino ffff80c000000440, st_mode 0x81a4, st_size 1b13c58
-    2 direct return: 0, rsp 0xffe545c8
-    2 mmap
-    2 mmap: addr 0x0000000000000000, length 0x1b7ab60, prot 0x1, flags 0x802, fd 3, offset 0x0
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e03200 @ offset 0x0
-    2    returning 0x100a66000
-    2 direct return: 4305870848, rsp 0xffe543c8
-    2 mmap
-    2 mmap: addr 0x0000000100b41000, length 0x498000, prot 0x5, flags 0x812, fd 3, offset 0xdb000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e03200 @ offset 0xdb000
-    2 vmap_remove_intersection: q [0x100b41000 0x100fd9000), r [0x100a66000 0x1025e1000)
-    2    returning 0x100b41000
-    2 direct return: 4306767872, rsp 0xffe543c8
-    2 mmap
-    2 mmap: addr 0x0000000100fd9000, length 0x1490000, prot 0x1, flags 0x812, fd 3, offset 0x573000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e03200 @ offset 0x573000
-    2 vmap_remove_intersection: q [0x100fd9000 0x102469000), r [0x100fd9000 0x1025e1000)
-    2    returning 0x100fd9000
-    2 direct return: 4311584768, rsp 0xffe543c8
-    2 mmap
-    2 mmap: addr 0x0000000102469000, length 0x112000, prot 0x3, flags 0x812, fd 3, offset 0x1a02000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e03200 @ offset 0x1a02000
-    2 vmap_remove_intersection: q [0x102469000 0x10257b000), r [0x100fd9000 0x1025e1000)
-    2    returning 0x102469000
-    2 direct return: 4333146112, rsp 0xffe543c8
-    2 mmap
-    2 mmap: addr 0x000000010257b000, length 0x65b60, prot 0x3, flags 0x32, fd -1, offset 0x0
-    2 vmap_remove_intersection: q [0x10257b000 0x1025e1000), r [0x10257b000 0x1025e1000)
-    2    returning 0x10257b000
-    2 direct return: 4334268416, rsp 0xffe543c8
-    2 close
-    2 close: fd 3
-    2 direct return: 0, rsp 0xffe545c8
-    2 openat
-    2    fd 3, length 14432, offset 0
-    2 direct return: 3, rsp 0xffe53e88
-    2 read
-    2 file_read: f 0xffffc00000099e18, dest 0x00000000ffe54118, offset 0 (file), length 832, file length 14432
-    2 sleep uninterruptible
-    2 file_read_complete: status (none)
-    2    read count 832
-    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
-    2 newfstatat
-    2 fd 3, stat 0x00000000ffe53fb0
-    2 st_ino ffff80c000000900, st_mode 0x81a4, st_size 3860
-    2 direct return: 0, rsp 0xffe53f08
-    2 mmap
-    2 mmap: addr 0x0000000000000000, length 0x4028, prot 0x1, flags 0x802, fd 3, offset 0x0
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e03000 @ offset 0x0
-    2    returning 0x1001da000
-    2 direct return: 4296908800, rsp 0xffe53c98
-    2 mmap
-    2 mmap: addr 0x00000001001db000, length 0x1000, prot 0x5, flags 0x812, fd 3, offset 0x1000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e03000 @ offset 0x1000
-    2 vmap_remove_intersection: q [0x1001db000 0x1001dc000), r [0x1001da000 0x1001df000)
-    2    returning 0x1001db000
-    2 direct return: 4296912896, rsp 0xffe53c98
-    2 mmap
-    2 mmap: addr 0x00000001001dc000, length 0x1000, prot 0x1, flags 0x812, fd 3, offset 0x2000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e03000 @ offset 0x2000
-    2 vmap_remove_intersection: q [0x1001dc000 0x1001dd000), r [0x1001dc000 0x1001df000)
-    2    returning 0x1001dc000
-    2 direct return: 4296916992, rsp 0xffe53c98
-    2 mmap
-    2 mmap: addr 0x00000001001dd000, length 0x2000, prot 0x3, flags 0x812, fd 3, offset 0x2000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e03000 @ offset 0x2000
-    2 vmap_remove_intersection: q [0x1001dd000 0x1001df000), r [0x1001dc000 0x1001df000)
-    2    returning 0x1001dd000
-    2 direct return: 4296921088, rsp 0xffe53c98
-    2 close
-    2 close: fd 3
-    2 direct return: 0, rsp 0xffe53f08
-    2 openat
-    2    fd 3, length 21448, offset 0
-    2 direct return: 3, rsp 0xffe53e68
-    2 read
-    2 file_read: f 0xffffc000035ef000, dest 0x00000000ffe540f8, offset 0 (file), length 832, file length 21448
-    2 sleep uninterruptible
-    2 file_read_complete: status (none)
-    2    read count 832
-    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
-    2 newfstatat
-    2 fd 3, stat 0x00000000ffe53f90
-    2 st_ino ffff80c0000005c0, st_mode 0x81a4, st_size 53c8
-    2 direct return: 0, rsp 0xffe53ee8
-    2 mmap
-    2 mmap: addr 0x0000000000000000, length 0x4028, prot 0x1, flags 0x802, fd 3, offset 0x0
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02800 @ offset 0x0
-    2    returning 0x100140000
-    2 direct return: 4296278016, rsp 0xffe53c78
-    2 mmap
-    2 mmap: addr 0x0000000100141000, length 0x1000, prot 0x5, flags 0x812, fd 3, offset 0x1000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02800 @ offset 0x1000
-    2 vmap_remove_intersection: q [0x100141000 0x100142000), r [0x100140000 0x100145000)
-    2    returning 0x100141000
-    2 direct return: 4296282112, rsp 0xffe53c78
-    2 mmap
-    2 mmap: addr 0x0000000100142000, length 0x1000, prot 0x1, flags 0x812, fd 3, offset 0x2000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02800 @ offset 0x2000
-    2 vmap_remove_intersection: q [0x100142000 0x100143000), r [0x100142000 0x100145000)
-    2    returning 0x100142000
-    2 direct return: 4296286208, rsp 0xffe53c78
-    2 mmap
-    2 mmap: addr 0x0000000100143000, length 0x2000, prot 0x3, flags 0x812, fd 3, offset 0x2000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02800 @ offset 0x2000
-    2 vmap_remove_intersection: q [0x100143000 0x100145000), r [0x100142000 0x100145000)
-    2    returning 0x100143000
-    2 direct return: 4296290304, rsp 0xffe53c78
-    2 close
-    2 close: fd 3
-    2 direct return: 0, rsp 0xffe53ee8
-    2 openat
-    2    fd 3, length 14664, offset 0
-    2 direct return: 3, rsp 0xffe53e48
-    2 read
-    2 file_read: f 0xffffc000035ef148, dest 0x00000000ffe540d8, offset 0 (file), length 832, file length 14664
-    2 sleep uninterruptible
-    2 file_read_complete: status (none)
-    2    read count 832
-    2 thread_wakeup: 2->2 blocked_on uninterruptible, RIP=0x28fd0d84b68
-    2 newfstatat
-    2 fd 3, stat 0x00000000ffe53f70
-    2 st_ino ffff80c000000680, st_mode 0x81a4, st_size 3948
-    2 direct return: 0, rsp 0xffe53ec8
-    2 mmap
-    2 mmap: addr 0x0000000000000000, length 0x4038, prot 0x1, flags 0x802, fd 3, offset 0x0
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02e00 @ offset 0x0
-    2    returning 0x100061000
-    2 direct return: 4295364608, rsp 0xffe53c58
-    2 mmap
-    2 mmap: addr 0x0000000100062000, length 0x1000, prot 0x5, flags 0x812, fd 3, offset 0x1000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02e00 @ offset 0x1000
-    2 vmap_remove_intersection: q [0x100062000 0x100063000), r [0x100061000 0x100066000)
-    2    returning 0x100062000
-    2 direct return: 4295368704, rsp 0xffe53c58
-    2 mmap
-    2 mmap: addr 0x0000000100063000, length 0x1000, prot 0x1, flags 0x812, fd 3, offset 0x2000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02e00 @ offset 0x2000
-    2 vmap_remove_intersection: q [0x100063000 0x100064000), r [0x100063000 0x100066000)
-    2    returning 0x100063000
-    2 direct return: 4295372800, rsp 0xffe53c58
-    2 mmap
-    2 mmap: addr 0x0000000100064000, length 0x2000, prot 0x3, flags 0x812, fd 3, offset 0x2000
-    2    fd 3: file-backed (regular)
-    2    associated with cache node 0xffffc00000e02e00 @ offset 0x2000
-    2 vmap_remove_intersection: q [0x100064000 0x100066000), r [0x100063000 0x100066000)
-    2    returning 0x100064000
-    2 direct return: 4295376896, rsp 0xffe53c58
-    2 close
-    2 close: fd 3
-    2 direct return: 0, rsp 0xffe53ec8
-    2 mprotect
-    2 mprotect: addr 0x0000000100064000, len 0x1000, prot 0x1
-    2 vmap_update_protections_locked: validate [0x100064000 0x100065000)
-    2 direct return: 0, rsp 0xffe54a48
-    2 mprotect
-    2 mprotect: addr 0x0000000100143000, len 0x1000, prot 0x1
-    2 vmap_update_protections_locked: validate [0x100143000 0x100144000)
-    2 direct return: 0, rsp 0xffe54a48
-    2 mprotect
-    2 mprotect: addr 0x00000001001dd000, len 0x1000, prot 0x1
-    2 vmap_update_protections_locked: validate [0x1001dd000 0x1001de000)
-    2 direct return: 0, rsp 0xffe54a48
-    2 mprotect
-    2 mprotect: addr 0x0000000102469000, len 0x17000, prot 0x1
-    2 vmap_update_protections_locked: validate [0x102469000 0x102480000)
-    2 direct return: 0, rsp 0xffe54a48
-    2 sched_get_priority_max
-    2 nosyscall sched_get_priority_max
-    2 sched_get_priority_min
-    2 nosyscall sched_get_priority_min
-    2 getpid
-    2 direct return: 2, rsp 0xffe55028
-    2 openat
-    2 spec_open: /sys/devices/system/cpu/online
-    2    fd 3, length 0, offset 0
-    2 direct return: 3, rsp 0xffe54a70
-    2 read
-    2 spec_read: /sys/devices/system/cpu/online
-    2 direct return: 5, rsp 0xffe54ac8
-    2 close
-    2 close: fd 3
-    2 spec_close: /sys/devices/system/cpu/online
-    2 direct return: 0, rsp 0xffe54ac8
-    2 openat
-    2 spec_open: /sys/devices/system/cpu/online
-    2    fd 3, length 0, offset 0
-    2 direct return: 3, rsp 0xffe54a70
-    2 read
-    2 spec_read: /sys/devices/system/cpu/online
-    2 direct return: 5, rsp 0xffe54ac8
-    2 close
-    2 close: fd 3
-    2 spec_close: /sys/devices/system/cpu/online
-    2 direct return: 0, rsp 0xffe54ac8
-    2 mmap
-    2 mmap: addr 0x0000000000000000, length 0x21000, prot 0x3, flags 0x22, fd -1, offset 0x0
-    2    returning 0x100029000
-    2 direct return: 4295135232, rsp 0xffe54e18
-    2 sched_getaffinity
-    2 direct return: 8, rsp 0xffe54fa8
-    2 munmap
-    2 munmap: addr 0x0000000100029000, size 0x21000
-    2 vmap_remove_intersection: q [0x100029000 0x10004a000), r [0x100029000 0x10004a000)
-    2 direct return: 0, rsp 0xffe54f78
-    2 openat
-    2 "/proc/sys/vm/mmap_min_addr" - not found
-    2 direct return: -2, rsp 0xffe54e70
-    2 openat
-    2 "/proc/cpuinfo" - not found
-    2 direct return: -2, rsp 0xffe54e70
-    2 openat
-    2 spec_open: /proc/self/maps
-    2    fd 3, length 0, offset 0
-    2 direct return: 3, rsp 0xffe54de0
-    2 brk
-    2 direct return: 8122368, rsp 0xffe54d78
-    2 newfstatat
-    2 fd 3, stat 0x00000000ffe54d90
-    2 st_ino ffff80c000001b40, st_mode 0x2000, st_size 0
-    2 direct return: 0, rsp 0xffe54d88
-    2 ioctl
-    2 ioctl: fd 3, request 0x5401
-    2 direct return: -38, rsp 0xffe54cf0
-    2 read
-    2 spec_read: /proc/self/maps
-    2 direct return: 3543, rsp 0xffe54e68
-    2 read
-    2 spec_read: /proc/self/maps
-    2 direct return: 0, rsp 0xffe54e68
-    2 close
-    2 close: fd 3
-    2 spec_close: /proc/self/maps
-    2 direct return: 0, rsp 0xffe54ed8
-    2 openat
-    2 spec_open: /sys/devices/system/cpu/online
-    2    fd 3, length 0, offset 0
-    2 direct return: 3, rsp 0xffe54b60
-    2 read
-    2 spec_read: /sys/devices/system/cpu/online
-    2 direct return: 5, rsp 0xffe54bb8
-    2 close
-    2 close: fd 3
-    2 spec_close: /sys/devices/system/cpu/online
-    2 direct return: 0, rsp 0xffe54bb8
-    2 getpid
-    2 direct return: 2, rsp 0xffe54f18
-    2 eventfd2
-    2 direct return: 3, rsp 0xffe54ec8
-    2 fcntl
-    2 fcntl: fd 3, cmd 4, arg 2048
-    2 fcntl: fd 3, F_SETFL, 800
-    2 direct return: 0, rsp 0xffe54e40
-    2 rt_sigaction
-    2 direct return: 0, rsp 0xffe54bd0
-    2 rt_sigprocmask
-    2 direct return: 0, rsp 0xffe54d20
-    2 mmap
-    2 mmap: addr 0x0000000000000000, length 0x201000, prot 0x0, flags 0x20022, fd -1, offset 0x0
-    2    returning 0x1007ae000
-    2 direct return: 4303020032, rsp 0xffe54d18
-    2 mprotect
-    2 mprotect: addr 0x00000001007af000, len 0x200000, prot 0x3
-    2 vmap_update_protections_locked: validate [0x1007af000 0x1009af000)
-    2 direct return: 0, rsp 0xffe54d18
-    2 rt_sigprocmask
-    2 direct return: 0, rsp 0xffe54d20
-    2 clone3
-    2 clone3: args_size: 88, pidfd: 0x00000001009ae2d0, child_tid: 0x00000001009ae2d0, parent_tid: 0x00000001009ae2d0, exit_signal: 0, stack: 0x00000001007ae000, stack_size: 0x1fd9c0, tls: 0x00000001009ae000
-    2 direct return: 3, rsp 0xffe54c48
-        3 set_robust_list
-    2 rt_sigprocmask
-        3 set_robust_list syscall with head 0x00000001009ae2e0
-    2 direct return: 0, rsp 0xffe54d20
-        3 direct return: 0, rsp 0x1009ab920
-    2 pipe2
-        3 rt_sigprocmask
-    2 direct return: 0, rsp 0xffe54f18
-        3 direct return: 0, rsp 0x1009ab920
-    2 pipe2
-        3 gettid
-    2 direct return: 0, rsp 0xffe54f18
-        3 direct return: 3, rsp 0x1009ab8e8
-        3 mmap
-        3 mmap: addr 0x0000000000000000, length 0x8000000, prot 0x0, flags 0x4022, fd -1, offset 0x0
-        3    returning 0x110382000
-        3 direct return: 4567080960, rsp 0x1009ab6c8
-        3 munmap
-    2 openat
-        3 munmap: addr 0x0000000110382000, size 0x3c7e000
-    2 "/proc/self/task/3/comm" - not found
-        3 vmap_remove_intersection: q [0x110382000 0x114000000), r [0x110382000 0x118382000)
-    2 direct return: -2, rsp 0xffe54db0
-        3 direct return: 0, rsp 0x1009ab6c8
-    2 close
-        3 munmap
-    2 close: fd 6
-        3 munmap: addr 0x0000000118000000, size 0x382000
-    2 direct return: 0, rsp 0xffe54f20
-        3 vmap_remove_intersection: q [0x118000000 0x118382000), r [0x114000000 0x118382000)
-    2 close
-        3 direct return: 0, rsp 0x1009ab6c8
-    2 close: fd 5
-        3 mprotect
-    2 direct return: 0, rsp 0xffe54f20
-        3 mprotect: addr 0x0000000114000000, len 0x21000, prot 0x3
-    2 close
-        3 vmap_update_protections_locked: validate [0x114000000 0x114021000)
-    2 close: fd 4
-        3 direct return: 0, rsp 0x1009ab6c8
-    2 direct return: 0, rsp 0xffe54f20
-        3 poll
-    2 close
-        3 sleep interruptible (on "thread")
-    2 close: fd 7
-    2 direct return: 0, rsp 0xffe54f20
-    2 munmap
-    2 munmap: addr 0x0000000100a66000, size 0x1b7ab60
-    2 vmap_remove_intersection: q [0x100a66000 0x1025e1000), r [0x100a66000 0x100b41000)
-    2 vmap_remove_intersection: q [0x100a66000 0x1025e1000), r [0x100b41000 0x100fd9000)
-    2 vmap_remove_intersection: q [0x100a66000 0x1025e1000), r [0x100fd9000 0x102469000)
-    2 vmap_remove_intersection: q [0x100a66000 0x1025e1000), r [0x102469000 0x102480000)
-    2 vmap_remove_intersection: q [0x100a66000 0x1025e1000), r [0x102480000 0x10257b000)
-    2 vmap_remove_intersection: q [0x100a66000 0x1025e1000), r [0x10257b000 0x1025e1000)
-    2 direct return: 0, rsp 0xffe54e18
-    2 munmap
-    2 munmap: addr 0x00000001001da000, size 0x4028
-    2 vmap_remove_intersection: q [0x1001da000 0x1001df000), r [0x1001da000 0x1001db000)
-    2 vmap_remove_intersection: q [0x1001da000 0x1001df000), r [0x1001db000 0x1001dc000)
-    2 vmap_remove_intersection: q [0x1001da000 0x1001df000), r [0x1001dc000 0x1001dd000)
-    2 vmap_remove_intersection: q [0x1001da000 0x1001df000), r [0x1001dd000 0x1001de000)
-    2 vmap_remove_intersection: q [0x1001da000 0x1001df000), r [0x1001de000 0x1001df000)
-    2 direct return: 0, rsp 0xffe54e18
-    2 munmap
-    2 munmap: addr 0x0000000100140000, size 0x4028
-    2 vmap_remove_intersection: q [0x100140000 0x100145000), r [0x100140000 0x100141000)
-    2 vmap_remove_intersection: q [0x100140000 0x100145000), r [0x100141000 0x100142000)
-    2 vmap_remove_intersection: q [0x100140000 0x100145000), r [0x100142000 0x100143000)
-    2 vmap_remove_intersection: q [0x100140000 0x100145000), r [0x100143000 0x100144000)
-    2 vmap_remove_intersection: q [0x100140000 0x100145000), r [0x100144000 0x100145000)
-    2 direct return: 0, rsp 0xffe54e18
-    2 futex
-    2 futex_wake [2 0x00000000005cfd90 2] 2147483647
-    2 direct return: 0, rsp 0xffe55680
-    2 write
-cudaGetDeviceCount returned 304
-    2 direct return: 32, rsp 0xffe550d0
-    2 write
--> OS call failed or operation not supported on this OS
-    2 direct return: 56, rsp 0xffe550d0
-    2 write
-Result = FAIL
-    2 direct return: 14, rsp 0xffe55710
-    2 exit_group
+) = 27
+write(1, " CUDA Device Query (Runtime API)"..., 65 CUDA Device Query (Runtime API) version (CUDART static linking)
+) = 65
+write(1, "\n", 1
+)                       = 1
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/libcuda.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v3/libcuda.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v2/libcuda.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/x86_64/libcuda.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/libcuda.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/libcuda.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/libcuda.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/x86_64/libcuda.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/libcuda.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/libcuda.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/libcuda.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=47743, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 47743, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fc4e008a000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcuda.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200\275\r\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=28392536, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 28814176, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc4ddfaa000
+mmap(0x7fc4de085000, 4816896, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xdb000) = 0x7fc4de085000
+mmap(0x7fc4de51d000, 21561344, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x573000) = 0x7fc4de51d000
+mmap(0x7fc4df9ad000, 1122304, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a02000) = 0x7fc4df9ad000
+mmap(0x7fc4dfabf000, 416608, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fc4dfabf000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v3/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v2/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=14432, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16424, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc4ddfa5000
+mmap(0x7fc4ddfa6000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7fc4ddfa6000
+mmap(0x7fc4ddfa7000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fc4ddfa7000
+mmap(0x7fc4ddfa8000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fc4ddfa8000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v3/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v2/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=21448, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16424, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc4ddfa0000
+mmap(0x7fc4ddfa1000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7fc4ddfa1000
+mmap(0x7fc4ddfa2000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fc4ddfa2000
+mmap(0x7fc4ddfa3000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fc4ddfa3000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/local/cuda-12.4/lib64/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v3/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/glibc-hwcaps/x86-64-v2/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/x86_64/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/x86_64/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/tls/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/x86_64/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/x86_64/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "$LD_LIBRARY_PATH/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=14664, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16440, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc4ddf9b000
+mmap(0x7fc4ddf9c000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7fc4ddf9c000
+mmap(0x7fc4ddf9d000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fc4ddf9d000
+mmap(0x7fc4ddf9e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fc4ddf9e000
+close(3)                                = 0
+mprotect(0x7fc4ddf9e000, 4096, PROT_READ) = 0
+mprotect(0x7fc4ddfa3000, 4096, PROT_READ) = 0
+mprotect(0x7fc4ddfa8000, 4096, PROT_READ) = 0
+mprotect(0x7fc4df9ad000, 94208, PROT_READ) = 0
+sched_get_priority_max(SCHED_RR)        = 99
+sched_get_priority_min(SCHED_RR)        = 1
+munmap(0x7fc4e008a000, 47743)           = 0
+getpid()                                = 550285
+openat(AT_FDCWD, "/sys/devices/system/cpu/online", O_RDONLY|O_CLOEXEC) = 3
+read(3, "0-191\n", 1024)                = 6
+close(3)                                = 0
+openat(AT_FDCWD, "/sys/devices/system/cpu/online", O_RDONLY|O_CLOEXEC) = 3
+read(3, "0-191\n", 1024)                = 6
+close(3)                                = 0
+mmap(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4ddf7a000
+sched_getaffinity(550285, 24, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95,
+96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191]) = 24
+munmap(0x7fc4ddf7a000, 135168)          = 0
+openat(AT_FDCWD, "/proc/sys/vm/mmap_min_addr", O_RDONLY) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=0, ...}, AT_EMPTY_PATH) = 0
+read(3, "65536\n", 1024)                = 6
+close(3)                                = 0
+openat(AT_FDCWD, "/proc/cpuinfo", O_RDONLY) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+read(3, "processor\t: 0\nvendor_id\t: Authen"..., 1024) = 1024
+read(3, "clzero irperf xsaveerptr rdpru w"..., 1024) = 1024
+close(3)                                = 0
+openat(AT_FDCWD, "/proc/self/maps", O_RDONLY) = 3
+brk(0x55c71ea6c000)                     = 0x55c71ea6c000
+newfstatat(3, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+read(3, "55c71d031000-55c71d03b000 r--p 0"..., 1024) = 1024
+read(3, "gnu/librt.so.1\n7fc4ddf9e000-7fc4"..., 1024) = 1024
+read(3, ".so.2\n7fc4ddfa7000-7fc4ddfa8000 "..., 1024) = 1024
+read(3, " fd:00 32976166                 "..., 1024) = 1024
+read(3, "x86_64-linux-gnu/libc.so.6\n7fc4d"..., 1024) = 1024
+read(3, "000 fd:00 32975929              "..., 1024) = 1024
+read(3, "0d2000-7fc4e00d4000 rw-p 0003900"..., 1024) = 439
+close(3)                                = 0
+openat(AT_FDCWD, "/sys/devices/system/cpu/online", O_RDONLY|O_CLOEXEC) = 3
+read(3, "0-191\n", 1024)                = 6
+close(3)                                = 0
+getpid()                                = 550285
+eventfd2(0, EFD_CLOEXEC|EFD_NONBLOCK)   = 3
+fcntl(3, F_SETFL, O_RDONLY|O_NONBLOCK)  = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7fc4dfca6870, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fc4dfc57520}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fc4dd79a000
+mprotect(0x7fc4dd79b000, 8388608, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7fc4ddf9a2d0, parent_tid=0x7fc4ddf9a2d0, exit_signal=0, stack=0x7fc4dd79a000, stack_size=0x7fd9c0, tls=0x7fc4ddf9a000} => {parent_tid=[550286]}, 88) = 550286
+strace: Process 550286 attached
+[pid 550285] rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+[pid 550286] rseq(0x7fc4ddf9a9a0, 0x20, 0, 0x53053053 <unfinished ...>
+[pid 550285] pipe2( <unfinished ...>
+[pid 550286] <... rseq resumed>)        = 0
+[pid 550285] <... pipe2 resumed>[4, 5], O_CLOEXEC) = 0
+[pid 550286] set_robust_list(0x7fc4ddf9a2e0, 24 <unfinished ...>
+[pid 550285] pipe2( <unfinished ...>
+[pid 550286] <... set_robust_list resumed>) = 0
+[pid 550285] <... pipe2 resumed>[6, 7], O_CLOEXEC) = 0
+[pid 550286] rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+[pid 550285] futex(0x55c71ea4b488, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+[pid 550286] <... rt_sigprocmask resumed>NULL, 8) = 0
+[pid 550286] gettid()                   = 550286
+[pid 550286] futex(0x55c71ea4b488, FUTEX_WAKE_PRIVATE, 2147483647) = 1
+[pid 550285] <... futex resumed>)       = 0
+[pid 550285] futex(0x55c71ea4b438, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 550286] mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0 <unfinished ...>
+[pid 550285] <... futex resumed>)       = 0
+[pid 550285] openat(AT_FDCWD, "/proc/self/task/550286/comm", O_WRONLY|O_CREAT|O_TRUNC, 0666 <unfinished ...>
+[pid 550286] <... mmap resumed>)        = 0x7fc4d579a000
+[pid 550286] munmap(0x7fc4d579a000, 42360832 <unfinished ...>
+[pid 550285] <... openat resumed>)      = 8
+[pid 550285] newfstatat(8, "",  <unfinished ...>
+[pid 550286] <... munmap resumed>)      = 0
+[pid 550285] <... newfstatat resumed>{st_mode=S_IFREG|0644, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 550286] munmap(0x7fc4dc000000, 24748032 <unfinished ...>
+[pid 550285] write(8, "cuda00001400006", 15 <unfinished ...>
+[pid 550286] <... munmap resumed>)      = 0
+[pid 550285] <... write resumed>)       = 15
+[pid 550286] mprotect(0x7fc4d8000000, 135168, PROT_READ|PROT_WRITE <unfinished ...>
+[pid 550285] close(8 <unfinished ...>
+[pid 550286] <... mprotect resumed>)    = 0
+[pid 550285] <... close resumed>)       = 0
+[pid 550285] write(3, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+[pid 550286] poll([{fd=3, events=POLLIN}], 1, -1 <unfinished ...>
+[pid 550285] <... write resumed>)       = 8
+[pid 550286] <... poll resumed>)        = 1 ([{fd=3, revents=POLLIN}])
+[pid 550285] futex(0x7fc4dfac6e08, FUTEX_WAKE_PRIVATE, 2147483647 <unfinished ...>
+[pid 550286] read(3,  <unfinished ...>
+[pid 550285] <... futex resumed>)       = 0
+[pid 550286] <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550285] openat(AT_FDCWD, "/dev/shm/cuda_injection_path_shm", O_RDWR|O_NOFOLLOW|O_CLOEXEC <unfinished ...>
+[pid 550286] poll([{fd=3, events=POLLIN}, {fd=4, events=POLLIN}], 2, -1 <unfinished ...>
+[pid 550285] <... openat resumed>)      = -1 ENOENT (No such file or directory)
+[pid 550285] openat(AT_FDCWD, "/root/.nv/nvidia-application-profile-globals-rc", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 550285] openat(AT_FDCWD, "/root/.nv/nvidia-application-profiles-rc", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 550285] openat(AT_FDCWD, "/root/.nv/nvidia-application-profiles-rc.d", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 550285] openat(AT_FDCWD, "/etc/nvidia/nvidia-application-profiles-rc", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 550285] openat(AT_FDCWD, "/etc/nvidia/nvidia-application-profiles-rc.d/", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 550285] openat(AT_FDCWD, "/usr/share/nvidia/nvidia-application-profiles-550.54.15-rc", O_RDONLY) = 8
+[pid 550285] fstat(8, {st_mode=S_IFREG|0444, st_size=17055, ...}) = 0
+[pid 550285] newfstatat(8, "", {st_mode=S_IFREG|0444, st_size=17055, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] read(8, "# Application profiles for the N"..., 16384) = 16384
+[pid 550285] read(8, "reaker_win_release.exe\" }, \"prof"..., 4096) = 671
+[pid 550285] brk(0x55c71ea8d000)        = 0x55c71ea8d000
+[pid 550285] close(8)                   = 0
+[pid 550285] openat(AT_FDCWD, "/usr/share/nvidia/nvidia-application-profiles-rc", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 550285] getpid()                   = 550285
+[pid 550285] readlink("/proc/550285/exe", "/home/qiaokun/code/gevulot-fil/d"..., 4095) = 42
+[pid 550285] openat(AT_FDCWD, "/proc/self/cmdline", O_RDONLY) = 8
+[pid 550285] newfstatat(8, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] read(8, "./deviceQuery\0", 4096) = 14
+[pid 550285] read(8, "", 3072)          = 0
+[pid 550285] close(8)                   = 0
+[pid 550285] getpid()                   = 550285
+[pid 550285] geteuid()                  = 0
+[pid 550285] socket(AF_UNIX, SOCK_SEQPACKET|SOCK_CLOEXEC, 0) = 8
+[pid 550285] setsockopt(8, SOL_SOCKET, SO_PASSCRED, [1], 4) = 0
+[pid 550285] connect(8, {sa_family=AF_UNIX, sun_path="/tmp/nvidia-mps/control"}, 26) = -1 ENOENT (No such file or directory)
+[pid 550285] close(8)                   = 0
+[pid 550285] readlink("/proc", 0x7ffe56faf490, 1023) = -1 EINVAL (Invalid argument)
+[pid 550285] readlink("/proc/self", "550285", 1023) = 6
+[pid 550285] readlink("/proc/550285", 0x7ffe56faf490, 1023) = -1 EINVAL (Invalid argument)
+[pid 550285] readlink("/proc/550285/exe", "/home/qiaokun/code/gevulot-fil/d"..., 1023) = 42
+[pid 550285] readlink("/home", 0x7ffe56faf490, 1023) = -1 EINVAL (Invalid argument)
+[pid 550285] readlink("/home/qiaokun", 0x7ffe56faf490, 1023) = -1 EINVAL (Invalid argument)
+[pid 550285] readlink("/home/qiaokun/code", 0x7ffe56faf490, 1023) = -1 EINVAL (Invalid argument)
+[pid 550285] readlink("/home/qiaokun/code/gevulot-fil", 0x7ffe56faf490, 1023) = -1 EINVAL (Invalid argument)
+[pid 550285] readlink("/home/qiaokun/code/gevulot-fil/deviceQuery", 0x7ffe56faf490, 1023) = -1 EINVAL (Invalid argument)
+[pid 550285] brk(0x55c71eac6000)        = 0x55c71eac6000
+[pid 550285] openat(AT_FDCWD, "/proc/modules", O_RDONLY) = 8
+[pid 550285] newfstatat(8, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] read(8, "vhost_vsock 28672 0 - Live 0xfff"..., 1024) = 1024
+[pid 550285] close(8)                   = 0
+[pid 550285] openat(AT_FDCWD, "/proc/driver/nvidia/params", O_RDONLY) = 8
+[pid 550285] newfstatat(8, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] read(8, "ResmanDebugLevel: 4294967295\nRmL"..., 1024) = 923
+[pid 550285] close(8)                   = 0
+[pid 550285] stat("/dev/nvidiactl", {st_mode=S_IFCHR|0666, st_rdev=makedev(0xc3, 0xff), ...}) = 0
+[pid 550285] stat("/dev/nvidiactl", {st_mode=S_IFCHR|0666, st_rdev=makedev(0xc3, 0xff), ...}) = 0
+[pid 550285] unlink("/dev/char/195:255") = 0
+[pid 550285] symlink("../nvidiactl", "/dev/char/195:255") = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR) = 8
+[pid 550285] fcntl(8, F_SETFD, FD_CLOEXEC) = 0
+[pid 550285] openat(AT_FDCWD, "/sys/devices/system/memory/block_size_bytes", O_RDONLY) = 9
+[pid 550285] read(9, "80000000\n", 99)  = 9
+[pid 550285] close(9)                   = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xd6, 0x8), 0x7ffe56fb0040) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xc8, 0x900), 0x7fc4dfb0d520) = 0
+[pid 550285] stat("/proc/driver/nvidia/gpus/0000:a1:00.0/numa_status", 0x7ffe56faffb0) = -1 ENOENT (No such file or directory)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x20), 0x7ffe56fb0190) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x29, 0x10), 0x7ffe56fb0170) = 0
+[pid 550285] close(8)                   = 0
+[pid 550285] openat(AT_FDCWD, "/proc/modules", O_RDONLY) = 8
+[pid 550285] newfstatat(8, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] read(8, "vhost_vsock 28672 0 - Live 0xfff"..., 1024) = 1024
+[pid 550285] close(8)                   = 0
+[pid 550285] openat(AT_FDCWD, "/proc/driver/nvidia/params", O_RDONLY) = 8
+[pid 550285] newfstatat(8, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] read(8, "ResmanDebugLevel: 4294967295\nRmL"..., 1024) = 923
+[pid 550285] close(8)                   = 0
+[pid 550285] stat("/dev/nvidiactl", {st_mode=S_IFCHR|0666, st_rdev=makedev(0xc3, 0xff), ...}) = 0
+[pid 550285] stat("/dev/nvidiactl", {st_mode=S_IFCHR|0666, st_rdev=makedev(0xc3, 0xff), ...}) = 0
+[pid 550285] unlink("/dev/char/195:255") = 0
+[pid 550285] symlink("../nvidiactl", "/dev/char/195:255") = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR) = 8
+[pid 550285] fcntl(8, F_SETFD, FD_CLOEXEC) = 0
+[pid 550285] openat(AT_FDCWD, "/sys/devices/system/memory/block_size_bytes", O_RDONLY) = 9
+[pid 550285] read(9, "80000000\n", 99)  = 9
+[pid 550285] close(9)                   = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xd6, 0x8), 0x7ffe56fb0600) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xc8, 0x900), 0x7fc4dfb0d520) = 0
+[pid 550285] stat("/proc/driver/nvidia/gpus/0000:a1:00.0/numa_status", 0x7ffe56fb0570) = -1 ENOENT (No such file or directory)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x20), 0x7ffe56fb0750) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf610) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf610) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fb0740) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf620) = 0
+[pid 550285] openat(AT_FDCWD, "/sys/devices/system/cpu/online", O_RDONLY|O_CLOEXEC) = 9
+[pid 550285] read(9, "0-191\n", 1024)   = 6
+[pid 550285] close(9)                   = 0
+[pid 550285] openat(AT_FDCWD, "/proc/self/status", O_RDONLY) = 9
+[pid 550285] newfstatat(9, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] read(9, "Name:\tdeviceQuery\nUmask:\t0022\nSt"..., 1024) = 1024
+[pid 550285] read(9, "fff,ffffffff,ffffffff,ffffffff\nC"..., 1024) = 440
+[pid 550285] close(9)                   = 0
+[pid 550285] openat(AT_FDCWD, "/sys/devices/system/node", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 9
+[pid 550285] newfstatat(9, "", {st_mode=S_IFDIR|0755, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] getdents64(9, 0x55c71ea4d550 /* 12 entries */, 32768) = 392
+[pid 550285] openat(AT_FDCWD, "/sys/devices/system/node/node0/cpumap", O_RDONLY) = 10
+[pid 550285] newfstatat(10, "", {st_mode=S_IFREG|0444, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] read(10, "00000000,0000ffff,ffffffff,00000"..., 4096) = 54
+[pid 550285] close(10)                  = 0
+[pid 550285] openat(AT_FDCWD, "/sys/devices/system/node/node1/cpumap", O_RDONLY) = 10
+[pid 550285] newfstatat(10, "", {st_mode=S_IFREG|0444, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] read(10, "ffffffff,ffff0000,00000000,fffff"..., 4096) = 54
+[pid 550285] close(10)                  = 0
+[pid 550285] getdents64(9, 0x55c71ea4d550 /* 0 entries */, 32768) = 0
+[pid 550285] close(9)                   = 0
+[pid 550285] futex(0x7fc4dfac78e8, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+[pid 550285] get_mempolicy([MPOL_DEFAULT], [000000000000000000, 000000000000000000, 000000000000000000, 000000000000000000, 000000000000000000, 000000000000000000, 000000000000000000, 000000000000000000, 000000000000000000, 000000000000000000, 000000000000000000, 000000000000000000, 000000000000000000, 000000000000000000, 000000000000000000, 000000000000000000], 1024, NULL, 0) = 0
+[pid 550285] openat(AT_FDCWD, "/proc/modules", O_RDONLY) = 9
+[pid 550285] newfstatat(9, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] read(9, "vhost_vsock 28672 0 - Live 0xfff"..., 1024) = 1024
+[pid 550285] close(9)                   = 0
+[pid 550285] openat(AT_FDCWD, "/proc/devices", O_RDONLY) = 9
+[pid 550285] newfstatat(9, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] read(9, "Character devices:\n  1 mem\n  4 /"..., 1024) = 876
+[pid 550285] close(9)                   = 0
+[pid 550285] stat("/dev/nvidia-uvm", {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1f7, 0), ...}) = 0
+[pid 550285] stat("/dev/nvidia-uvm", {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1f7, 0), ...}) = 0
+[pid 550285] unlink("/dev/char/503:0")  = 0
+[pid 550285] symlink("../nvidia-uvm", "/dev/char/503:0") = 0
+[pid 550285] stat("/dev/nvidia-uvm-tools", {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1f7, 0x1), ...}) = 0
+[pid 550285] stat("/dev/nvidia-uvm-tools", {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1f7, 0x1), ...}) = 0
+[pid 550285] unlink("/dev/char/503:1")  = 0
+[pid 550285] symlink("../nvidia-uvm-tools", "/dev/char/503:1") = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidia-uvm", O_RDWR|O_CLOEXEC) = 9
+[pid 550285] fcntl(9, F_GETFD)          = 0x1 (flags FD_CLOEXEC)
+[pid 550285] openat(AT_FDCWD, "/dev/nvidia-uvm", O_RDWR|O_CLOEXEC) = 10
+[pid 550285] fcntl(10, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1, 0x3000), 0x7ffe56fb0750) = 0
+[pid 550285] ioctl(10, _IOC(_IOC_NONE, 0, 0x4b, 0), 0x7ffe56fb0750) = 0
+[pid 550285] close(10)                  = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x27, 0), 0x7ffe56fb0750) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad7c0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56facff0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad700) = 0
+[pid 550285] openat(AT_FDCWD, "/proc/driver/nvidia/params", O_RDONLY) = 10
+[pid 550285] newfstatat(10, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] read(10, "ResmanDebugLevel: 4294967295\nRmL"..., 1024) = 923
+[pid 550285] close(10)                  = 0
+[pid 550285] stat("/dev/nvidia0", {st_mode=S_IFCHR|0666, st_rdev=makedev(0xc3, 0), ...}) = 0
+[pid 550285] stat("/dev/nvidia0", {st_mode=S_IFCHR|0666, st_rdev=makedev(0xc3, 0), ...}) = 0
+[pid 550285] unlink("/dev/char/195:0")  = 0
+[pid 550285] symlink("../nvidia0", "/dev/char/195:0") = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidia0", O_RDWR|O_CLOEXEC) = 10
+[pid 550285] fcntl(10, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad8c0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad8b0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x29, 0x10), 0x7ffe56fae950) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad740) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad740) = 0
+[pid 550285] openat(AT_FDCWD, "/proc/driver/nvidia/params", O_RDONLY) = 11
+[pid 550285] newfstatat(11, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] read(11, "ResmanDebugLevel: 4294967295\nRmL"..., 1024) = 923
+[pid 550285] close(11)                  = 0
+[pid 550285] stat("/dev/nvidia0", {st_mode=S_IFCHR|0666, st_rdev=makedev(0xc3, 0), ...}) = 0
+[pid 550285] stat("/dev/nvidia0", {st_mode=S_IFCHR|0666, st_rdev=makedev(0xc3, 0), ...}) = 0
+[pid 550285] unlink("/dev/char/195:0")  = 0
+[pid 550285] symlink("../nvidia0", "/dev/char/195:0") = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidia0", O_RDWR|O_CLOEXEC) = 11
+[pid 550285] fcntl(11, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(11, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xc9, 0x4), 0x7ffe56fae8c0) = 0
+[pid 550285] ioctl(11, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xd7, 0x230), 0x7ffe56fae640) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fae990) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad8c0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad600) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad8c0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad840) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad740) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad740) = 0
+[pid 550285] openat(AT_FDCWD, "/proc/driver/nvidia/params", O_RDONLY) = 12
+[pid 550285] newfstatat(12, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] read(12, "ResmanDebugLevel: 4294967295\nRmL"..., 1024) = 923
+[pid 550285] close(12)                  = 0
+[pid 550285] stat("/dev/nvidia0", {st_mode=S_IFCHR|0666, st_rdev=makedev(0xc3, 0), ...}) = 0
+[pid 550285] stat("/dev/nvidia0", {st_mode=S_IFCHR|0666, st_rdev=makedev(0xc3, 0), ...}) = 0
+[pid 550285] unlink("/dev/char/195:0")  = 0
+[pid 550285] symlink("../nvidia0", "/dev/char/195:0") = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidia0", O_RDWR|O_CLOEXEC) = 12
+[pid 550285] fcntl(12, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(12, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xc9, 0x4), 0x7ffe56fae8c0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fae9d0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fae9e0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad710) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad240) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad7c0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56face30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56face40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fac620) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56facc70) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad4e0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad6b0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad3a0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad3a0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad3a0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad3a0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad3a0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad2c0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad500) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad5a0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad6b0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad6b0) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidia0", O_RDWR|O_CLOEXEC) = 13
+[pid 550285] fcntl(13, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(13, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xc9, 0x4), 0x7ffe56fae770) = 0
+[pid 550285] ioctl(13, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xce, 0x10), 0x7ffe56fae760) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad400) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad5e0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad5e0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad5e0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad5e0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad5e0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad5e0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad5e0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad5d0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad550) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fab030) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad6e0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad530) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fae750) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad520) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidia0", O_RDWR|O_CLOEXEC) = 14
+[pid 550285] fcntl(14, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56fae6e0) = 0
+[pid 550285] mmap(NULL, 65536, PROT_WRITE, MAP_SHARED, 14, 0) = 0x7fc4dd78a000
+[pid 550285] close(14)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad680) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fae7d0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fae7d0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad6d0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad610) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad610) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad710) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad5d0) = 0
+[pid 550285] openat(AT_FDCWD, "/sys/bus/pci/devices/0000:a1:00.0/numa_node", O_RDONLY) = 14
+[pid 550285] newfstatat(14, "", {st_mode=S_IFREG|0644, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] read(14, "1\n", 4096)      = 2
+[pid 550285] close(14)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fad8c0) = 0
+[pid 550285] mmap(NULL, 100663296, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4d2000000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea20) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea20) = 0
+[pid 550285] mmap(NULL, 2465792, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4dd530000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fac810) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fae400) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56facd00) = 0
+[pid 550285] mmap(NULL, 659456, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4dd48f000
+[pid 550285] mkdir("/root", 0700)       = -1 EEXIST (File exists)
+[pid 550285] mkdir("/root/.nv", 0700)   = -1 EEXIST (File exists)
+[pid 550285] mkdir("/root/.nv/ComputeCache", 0700) = -1 EEXIST (File exists)
+[pid 550285] sysinfo({uptime=84694, loads=[245312, 94528, 93120], totalram=2151656194048, freeram=1878424801280, sharedram=47656960, bufferram=4234289152, totalswap=0, freeswap=0, procs=3685, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+[pid 550285] uname({sysname="Linux", nodename="ipfs", ...}) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x25, 0), 0x7ffe56fb02c0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x17, 0), 0x7ffe56fb0790) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fb04f0) = 0
+[pid 550285] prlimit64(0, RLIMIT_AS, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+[pid 550285] mmap(0x200000000, 4297064448, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x200000000
+[pid 550285] mmap(NULL, 536866816, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4b2001000
+[pid 550285] munmap(0x7fc4b2001000, 234876928) = 0
+[pid 550285] munmap(0x7fc4d0000000, 33554432) = 0
+[pid 550285] mmap(NULL, 16912384, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4dc46e000
+[pid 550285] getpid()                   = 550285
+[pid 550285] stat("/proc/550285/ns/pid", {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+[pid 550285] stat("/proc/550285/ns/pid", {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+[pid 550285] socket(AF_UNIX, SOCK_SEQPACKET|SOCK_CLOEXEC, 0) = 14
+[pid 550285] unlink("")                 = -1 ENOENT (No such file or directory)
+[pid 550285] bind(14, {sa_family=AF_UNIX, sun_path=@"cuda-uvmfd-4026531836-550285\0"}, 32) = 0
+[pid 550285] listen(14, 128)            = 0
+[pid 550285] write(3, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550286] <... poll resumed>)        = 1 ([{fd=3, revents=POLLIN}])
+[pid 550285] getpid( <unfinished ...>
+[pid 550286] read(3,  <unfinished ...>
+[pid 550285] <... getpid resumed>)      = 550285
+[pid 550286] <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550286] poll([{fd=3, events=POLLIN}, {fd=4, events=POLLIN}, {fd=14, events=POLLIN}], 3, -1 <unfinished ...>
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf990) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf810) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf4c0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf4c0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf4c0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf720) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf5d0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf4c0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf4c0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf4c0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf720) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf5d0) = 0
+[pid 550285] getpid()                   = 550285
+[pid 550285] getpid()                   = 550285
+[pid 550285] futex(0x55c71d0e4d90, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+[pid 550285] write(1, "Detected 1 CUDA Capable device(s"..., 34Detected 1 CUDA Capable device(s)
+) = 34
+[pid 550285] futex(0x7fc4dfb0b728, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf290) = 0
+[pid 550285] eventfd2(0, EFD_CLOEXEC|EFD_NONBLOCK) = 15
+[pid 550285] fcntl(15, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
+[pid 550285] mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fc4d17ff000
+[pid 550285] mprotect(0x7fc4d1800000, 8388608, PROT_READ|PROT_WRITE) = 0
+[pid 550285] rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+[pid 550285] clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7fc4d1fff2d0, parent_tid=0x7fc4d1fff2d0, exit_signal=0, stack=0x7fc4d17ff000, stack_size=0x7fd9c0, tls=0x7fc4d1fff000}strace: Process 550293 attached
+ => {parent_tid=[550293]}, 88) = 550293
+[pid 550293] rseq(0x7fc4d1fff9a0, 0x20, 0, 0x53053053 <unfinished ...>
+[pid 550285] rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+[pid 550293] <... rseq resumed>)        = 0
+[pid 550285] <... rt_sigprocmask resumed>NULL, 8) = 0
+[pid 550293] set_robust_list(0x7fc4d1fff2e0, 24 <unfinished ...>
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20) <unfinished ...>
+[pid 550293] <... set_robust_list resumed>) = 0
+[pid 550285] <... ioctl resumed>, 0x7ffe56faf2d0) = 0
+[pid 550293] rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x19, 0) <unfinished ...>
+[pid 550293] <... rt_sigprocmask resumed>NULL, 8) = 0
+[pid 550293] gettid()                   = 550293
+[pid 550285] <... ioctl resumed>, 0x7ffe56fb03b0) = 0
+[pid 550293] mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0 <unfinished ...>
+[pid 550285] mmap(NULL, 16912384, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid 550293] <... mmap resumed>)        = 0x7fc4b8000000
+[pid 550285] <... mmap resumed>)        = 0x7fc4d07de000
+[pid 550293] munmap(0x7fc4bc000000, 67108864) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30) <unfinished ...>
+[pid 550293] mprotect(0x7fc4b8000000, 135168, PROT_READ|PROT_WRITE <unfinished ...>
+[pid 550285] <... ioctl resumed>, 0x7ffe56faf680) = 0
+[pid 550293] <... mprotect resumed>)    = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf360) = 0
+[pid 550293] poll([{fd=15, events=POLLIN}], 1, 100 <unfinished ...>
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56facf50) = 0
+[pid 550285] mmap(0x10000000000, 67108864, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x10000000000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf560) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf240) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56face30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf560) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf240) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56face30) = 0
+[pid 550285] mmap(NULL, 266240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4dc42d000
+[pid 550285] mmap(NULL, 528384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4dc3ac000
+[pid 550285] mmap(NULL, 528384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4dc32b000
+[pid 550285] mmap(NULL, 528384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4dc2aa000
+[pid 550285] mmap(NULL, 67104768, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4bc001000
+[pid 550285] munmap(0x7fc4bc001000, 33550336) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf760) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf440) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56fad030) = 0
+[pid 550285] brk(0x55c71eaf6000)        = 0x55c71eaf6000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fb0040) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fb0030) = 0
+[pid 550285] mmap(NULL, 274432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4dc267000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faef10) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faddd0) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidia0", O_RDWR|O_CLOEXEC) = 16
+[pid 550285] fcntl(16, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faef90) = 0
+[pid 550285] mmap(0x200200000, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 16, 0) = 0x200200000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x5e, 0x28), 0x7ffe56faef60) = 0
+[pid 550285] close(16)                  = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faebf0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56fac7e0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faed40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadc00) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 16
+[pid 550285] fcntl(16, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faedc0) = 0
+[pid 550285] mmap(0x200400000, 50331648, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 16, 0) = 0x200400000
+[pid 550285] close(16)                  = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faea20) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56fac610) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 16
+[pid 550285] fcntl(16, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07de000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 16, 0) = 0x7fc4d07de000
+[pid 550285] close(16)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf430) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fae2f0) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 16
+[pid 550285] fcntl(16, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf4b0) = 0
+[pid 550285] mmap(0x204400000, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 16, 0) = 0x204400000
+[pid 550285] close(16)                  = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf110) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56facd00) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf430) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fae2f0) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 16
+[pid 550285] fcntl(16, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf4b0) = 0
+[pid 550285] mmap(0x204600000, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 16, 0) = 0x204600000
+[pid 550285] close(16)                  = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf110) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56facd00) = 0
+[pid 550285] brk(0x55c71eb1c000)        = 0x55c71eb1c000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 16
+[pid 550285] fcntl(16, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07df000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 16, 0) = 0x7fc4d07df000
+[pid 550285] close(16)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 16
+[pid 550285] fcntl(16, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07e0000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 16, 0) = 0x7fc4d07e0000
+[pid 550285] close(16)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] brk(0x55c71eb46000)        = 0x55c71eb46000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 16
+[pid 550285] fcntl(16, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07e1000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 16, 0) = 0x7fc4d07e1000
+[pid 550285] close(16)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 16
+[pid 550285] fcntl(16, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07e2000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 16, 0) = 0x7fc4d07e2000
+[pid 550285] close(16)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 16
+[pid 550285] fcntl(16, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07e3000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 16, 0) = 0x7fc4d07e3000
+[pid 550285] close(16)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] brk(0x55c71eb72000)        = 0x55c71eb72000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 16
+[pid 550285] fcntl(16, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07e4000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 16, 0) = 0x7fc4d07e4000
+[pid 550285] close(16)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 16
+[pid 550285] fcntl(16, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07e5000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 16, 0) = 0x7fc4d07e5000
+[pid 550285] close(16)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf100) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidia0", O_RDWR|O_CLOEXEC) = 16
+[pid 550285] fcntl(16, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(16, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xc9, 0x4), 0x7ffe56fb00f0) = 0
+[pid 550285] ioctl(16, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xce, 0x10), 0x7ffe56fb00e0) = 0
+[pid 550285] dup(16)                    = 17
+[pid 550285] fcntl(17, F_SETFD, FD_CLOEXEC) = 0
+[pid 550285] ioctl(16, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fb00d0) = 0
+[pid 550285] write(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] <... poll resumed>)        = 1 ([{fd=15, revents=POLLIN}])
+[pid 550285] futex(0x7ffe56fb01a0, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1717592358, tv_nsec=507234000}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+[pid 550293] read(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] futex(0x7ffe56fb01a0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 550285] <... futex resumed>)       = 0
+[pid 550293] <... futex resumed>)       = 1
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30) <unfinished ...>
+[pid 550293] poll([{fd=15, events=POLLIN}, {fd=17, events=POLLIN}], 2, 61 <unfinished ...>
+[pid 550285] <... ioctl resumed>, 0x7ffe56fb0040) = 0
+[pid 550285] mmap(NULL, 139264, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4dc245000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 18
+[pid 550285] fcntl(18, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07e6000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 18, 0) = 0x7fc4d07e6000
+[pid 550285] close(18)                  = 0
+[pid 550285] brk(0x55c71eb93000)        = 0x55c71eb93000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 18
+[pid 550285] fcntl(18, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07e7000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 18, 0) = 0x7fc4d07e7000
+[pid 550285] close(18)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 18
+[pid 550285] fcntl(18, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07e8000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 18, 0) = 0x7fc4d07e8000
+[pid 550285] close(18)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] brk(0x55c71ebc0000)        = 0x55c71ebc0000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 18
+[pid 550285] fcntl(18, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07e9000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 18, 0) = 0x7fc4d07e9000
+[pid 550285] close(18)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf100) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidia0", O_RDWR|O_CLOEXEC) = 18
+[pid 550285] fcntl(18, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(18, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xc9, 0x4), 0x7ffe56fb00f0) = 0
+[pid 550285] ioctl(18, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xce, 0x10), 0x7ffe56fb00e0) = 0
+[pid 550285] dup(18)                    = 19
+[pid 550285] fcntl(19, F_SETFD, FD_CLOEXEC) = 0
+[pid 550285] ioctl(18, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fb00d0) = 0
+[pid 550285] write(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] <... poll resumed>)        = 1 ([{fd=15, revents=POLLIN}])
+[pid 550285] futex(0x7ffe56fb01a0, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1717592358, tv_nsec=510916000}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+[pid 550293] read(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] futex(0x7ffe56fb01a0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 550285] <... futex resumed>)       = 0
+[pid 550293] <... futex resumed>)       = 1
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30) <unfinished ...>
+[pid 550293] poll([{fd=15, events=POLLIN}, {fd=17, events=POLLIN}, {fd=19, events=POLLIN}], 3, 58 <unfinished ...>
+[pid 550285] <... ioctl resumed>, 0x7ffe56fb0040) = 0
+[pid 550285] mmap(NULL, 139264, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4dc223000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 20
+[pid 550285] fcntl(20, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07ea000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 20, 0) = 0x7fc4d07ea000
+[pid 550285] close(20)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 20
+[pid 550285] fcntl(20, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07eb000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 20, 0) = 0x7fc4d07eb000
+[pid 550285] close(20)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] brk(0x55c71ebee000)        = 0x55c71ebee000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 20
+[pid 550285] fcntl(20, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07ec000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 20, 0) = 0x7fc4d07ec000
+[pid 550285] close(20)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf090) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fadf50) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 20
+[pid 550285] fcntl(20, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf110) = 0
+[pid 550285] mmap(0x7fc4d07ed000, 4096, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 20, 0) = 0x7fc4d07ed000
+[pid 550285] close(20)                  = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafa30) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeaa0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fafb40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faea60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faeab0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x1b, 0), 0x7ffe56fb01f0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf100) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidia0", O_RDWR|O_CLOEXEC) = 20
+[pid 550285] fcntl(20, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(20, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xc9, 0x4), 0x7ffe56fb00f0) = 0
+[pid 550285] ioctl(20, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xce, 0x10), 0x7ffe56fb00e0) = 0
+[pid 550285] dup(20)                    = 21
+[pid 550285] fcntl(21, F_SETFD, FD_CLOEXEC) = 0
+[pid 550285] ioctl(20, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fb00d0) = 0
+[pid 550285] write(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] <... poll resumed>)        = 1 ([{fd=15, revents=POLLIN}])
+[pid 550285] futex(0x7ffe56fb01a0, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1717592358, tv_nsec=514484000}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+[pid 550293] read(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] futex(0x7ffe56fb01a0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 550285] <... futex resumed>)       = 0
+[pid 550293] <... futex resumed>)       = 1
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30) <unfinished ...>
+[pid 550293] poll([{fd=15, events=POLLIN}, {fd=17, events=POLLIN}, {fd=19, events=POLLIN}, {fd=21, events=POLLIN}], 4, 54 <unfinished ...>
+[pid 550285] <... ioctl resumed>, 0x7ffe56faf4d0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fae390) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 22
+[pid 550285] fcntl(22, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf550) = 0
+[pid 550285] mmap(0x204800000, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 22, 0) = 0x204800000
+[pid 550285] close(22)                  = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf1b0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56facda0) = 0
+[pid 550285] eventfd2(0, EFD_CLOEXEC|EFD_NONBLOCK) = 22
+[pid 550285] fcntl(22, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
+[pid 550285] write(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] <... poll resumed>)        = 1 ([{fd=15, revents=POLLIN}])
+[pid 550285] futex(0x7ffe56fb0270, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1717592358, tv_nsec=515545000}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+[pid 550293] read(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] futex(0x7ffe56fb0270, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 550285] <... futex resumed>)       = 0
+[pid 550293] <... futex resumed>)       = 1
+[pid 550293] poll([{fd=15, events=POLLIN}, {fd=17, events=POLLIN}, {fd=19, events=POLLIN}, {fd=21, events=POLLIN}, {fd=22, events=POLLIN}], 5, 53 <unfinished ...>
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf2a0) = 0
+[pid 550285] mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fc4bd7ff000
+[pid 550285] mprotect(0x7fc4bd800000, 8388608, PROT_READ|PROT_WRITE) = 0
+[pid 550285] rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+[pid 550285] clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7fc4bdfff2d0, parent_tid=0x7fc4bdfff2d0, exit_signal=0, stack=0x7fc4bd7ff000, stack_size=0x7fd9c0, tls=0x7fc4bdfff000} => {parent_tid=[550294]}, 88) = 550294
+strace: Process 550294 attached
+[pid 550285] rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+[pid 550285] brk(0x55c71ec0f000 <unfinished ...>
+[pid 550294] rseq(0x7fc4bdfff9a0, 0x20, 0, 0x53053053 <unfinished ...>
+[pid 550285] <... brk resumed>)         = 0x55c71ec0f000
+[pid 550294] <... rseq resumed>)        = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30) <unfinished ...>
+[pid 550294] set_robust_list(0x7fc4bdfff2e0, 24) = 0
+[pid 550285] <... ioctl resumed>, 0x7ffe56faf570) = 0
+[pid 550294] rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0) <unfinished ...>
+[pid 550294] <... rt_sigprocmask resumed>NULL, 8) = 0
+[pid 550285] <... ioctl resumed>, 0x7ffe56faf250) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0) <unfinished ...>
+[pid 550294] gettid()                   = 550294
+[pid 550285] <... ioctl resumed>, 0x7ffe56face40) = 0
+[pid 550294] futex(0x55c71ea561b0, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1717592358, tv_nsec=924716000}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x44, 0), 0x7ffe56facd00) = 0
+[pid 550285] mmap(0x204a00000, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 9, 0x204a00000) = 0x204a00000
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x48, 0), 0x7ffe56fac7d0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf530) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fae3f0) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 23
+[pid 550285] fcntl(23, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf5b0) = 0
+[pid 550285] mmap(0x204c00000, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 23, 0) = 0x204c00000
+[pid 550285] close(23)                  = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf210) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56face00) = 0
+[pid 550285] brk(0x55c71ec33000)        = 0x55c71ec33000
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x17, 0), 0x7ffe56fb0320) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x17, 0), 0x7ffe56fb0320) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x17, 0), 0x7ffe56fb0320) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x17, 0), 0x7ffe56fb0320) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x17, 0), 0x7ffe56fb0320) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x17, 0), 0x7ffe56fb0320) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x17, 0), 0x7ffe56fb0320) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf420) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fae2e0) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 23
+[pid 550285] fcntl(23, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf4a0) = 0
+[pid 550285] mmap(0x7fc4be400000, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 23, 0) = 0x7fc4be400000
+[pid 550285] close(23)                  = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf100) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56faccf0) = 0
+[pid 550285] mmap(0x7fc4be600000, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fc4be600000
+[pid 550285] ioctl(11, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x27, 0x38), 0x7ffe56faf410) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf100) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56faccf0) = 0
+[pid 550285] mmap(NULL, 208896, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4dc1f0000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf700) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf3e0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56facfd0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf420) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fae2e0) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 23
+[pid 550285] fcntl(23, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf4a0) = 0
+[pid 550285] mmap(0x205000000, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 23, 0) = 0x205000000
+[pid 550285] close(23)                  = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf100) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56faccf0) = 0
+[pid 550285] brk(0x55c71ec54000)        = 0x55c71ec54000
+[pid 550285] mmap(0x7fc4be800000, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fc4be800000
+[pid 550285] ioctl(11, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x27, 0x38), 0x7ffe56faf4a0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf190) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56facd80) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf4b0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf190) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56facd80) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x41, 0), 0x7ffe56faf5c0) = 0
+[pid 550285] mmap(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_ANONYMOUS, -1, 0) = 0x7fc4d05de000
+[pid 550285] ioctl(11, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x27, 0x38), 0x7ffe56faf8e0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf5d0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56fad1c0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faed90) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faea70) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56fac660) = 0
+[pid 550285] brk(0x55c71ec75000)        = 0x55c71ec75000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf6b0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fae570) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 23
+[pid 550285] fcntl(23, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf730) = 0
+[pid 550285] mmap(0x7fc4bf000000, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 23, 0) = 0x7fc4bf000000
+[pid 550285] close(23)                  = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf390) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56facf80) = 0
+[pid 550285] mmap(NULL, 1318912, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4dc0ae000
+[pid 550285] brk(0x55c71ec97000)        = 0x55c71ec97000
+[pid 550285] brk(0x55c71ecb8000)        = 0x55c71ecb8000
+[pid 550285] brk(0x55c71ecd9000)        = 0x55c71ecd9000
+[pid 550285] brk(0x55c71ecfa000)        = 0x55c71ecfa000
+[pid 550285] brk(0x55c71ed26000)        = 0x55c71ed26000
+[pid 550285] brk(0x55c71ed4b000)        = 0x55c71ed4b000
+[pid 550285] brk(0x55c71ed6e000)        = 0x55c71ed6e000
+[pid 550285] brk(0x55c71ed8f000)        = 0x55c71ed8f000
+[pid 550285] brk(0x55c71edb0000)        = 0x55c71edb0000
+[pid 550285] brk(0x55c71edd8000)        = 0x55c71edd8000
+[pid 550285] brk(0x55c71edf9000)        = 0x55c71edf9000
+[pid 550285] brk(0x55c71ee1f000)        = 0x55c71ee1f000
+[pid 550285] brk(0x55c71ee40000)        = 0x55c71ee40000
+[pid 550285] sysinfo({uptime=84694, loads=[245312, 94528, 93120], totalram=2151656194048, freeram=1878320963584, sharedram=53850112, bufferram=4234289152, totalswap=0, freeswap=0, procs=3690, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+[pid 550285] mmap(NULL, 2101248, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4d03dd000
+[pid 550285] munmap(0x7fc4d03dd000, 2101248) = 0
+[pid 550285] brk(0x55c71eeb4000)        = 0x55c71eeb4000
+[pid 550285] brk(0x55c71eedf000)        = 0x55c71eedf000
+[pid 550285] brk(0x55c71ef04000)        = 0x55c71ef04000
+[pid 550285] brk(0x55c71ef25000)        = 0x55c71ef25000
+[pid 550285] brk(0x55c71ef46000)        = 0x55c71ef46000
+[pid 550285] brk(0x55c71ef67000)        = 0x55c71ef67000
+[pid 550285] brk(0x55c71ef88000)        = 0x55c71ef88000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fae5e0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56fae2c0) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56fabeb0) = 0
+[pid 550285] brk(0x55c71f1a8000)        = 0x55c71f1a8000
+[pid 550285] mmap(0x7fc4bf400000, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fc4bf400000
+[pid 550285] ioctl(11, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x27, 0x38), 0x7ffe56faf690) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf380) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56facf70) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fb03a0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf530) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fae3f0) = 0
+[pid 550285] openat(AT_FDCWD, "/dev/nvidiactl", O_RDWR|O_CLOEXEC) = 23
+[pid 550285] fcntl(23, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x4e, 0x38), 0x7ffe56faf5b0) = 0
+[pid 550285] mmap(0x7fc4bf600000, 5451776, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_FIXED, 23, 0) = 0x7fc4bf600000
+[pid 550285] close(23)                  = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf210) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56face00) = 0
+[pid 550285] mmap(NULL, 67104768, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4b4001000
+[pid 550285] munmap(0x7fc4b4001000, 33550336) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf670) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf350) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56facf40) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf670) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf350) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56facf40) = 0
+[pid 550285] brk(0x55c71f24f000)        = 0x55c71f24f000
+[pid 550285] brk(0x55c71f298000)        = 0x55c71f298000
+[pid 550285] openat(AT_FDCWD, "/dev/nvidia0", O_RDWR|O_CLOEXEC) = 23
+[pid 550285] fcntl(23, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(23, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xc9, 0x4), 0x7ffe56fb0250) = 0
+[pid 550285] ioctl(23, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xce, 0x10), 0x7ffe56fb0240) = 0
+[pid 550285] dup(23)                    = 24
+[pid 550285] fcntl(24, F_SETFD, FD_CLOEXEC) = 0
+[pid 550285] ioctl(23, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fb0230) = 0
+[pid 550285] write(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] <... poll resumed>)        = 1 ([{fd=15, revents=POLLIN}])
+[pid 550285] futex(0x7ffe56fb0300, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1717592358, tv_nsec=547164000}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+[pid 550293] read(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] futex(0x7ffe56fb0300, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 550285] <... futex resumed>)       = 0
+[pid 550293] <... futex resumed>)       = 1
+[pid 550285] openat(AT_FDCWD, "/dev/nvidia0", O_RDWR|O_CLOEXEC <unfinished ...>
+[pid 550293] poll([{fd=15, events=POLLIN}, {fd=17, events=POLLIN}, {fd=19, events=POLLIN}, {fd=21, events=POLLIN}, {fd=22, events=POLLIN}, {fd=24, events=POLLIN}], 6, 22 <unfinished ...>
+[pid 550285] <... openat resumed>)      = 25
+[pid 550285] fcntl(25, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(25, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xc9, 0x4), 0x7ffe56fb0250) = 0
+[pid 550285] ioctl(25, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xce, 0x10), 0x7ffe56fb0240) = 0
+[pid 550285] dup(25)                    = 26
+[pid 550285] fcntl(26, F_SETFD, FD_CLOEXEC) = 0
+[pid 550285] ioctl(25, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fb0230) = 0
+[pid 550285] write(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] <... poll resumed>)        = 1 ([{fd=15, revents=POLLIN}])
+[pid 550285] futex(0x7ffe56fb0300, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1717592358, tv_nsec=547600000}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+[pid 550293] read(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] futex(0x7ffe56fb0300, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 550285] <... futex resumed>)       = 0
+[pid 550293] <... futex resumed>)       = 1
+[pid 550285] openat(AT_FDCWD, "/dev/nvidia0", O_RDWR|O_CLOEXEC <unfinished ...>
+[pid 550293] poll([{fd=15, events=POLLIN}, {fd=17, events=POLLIN}, {fd=19, events=POLLIN}, {fd=21, events=POLLIN}, {fd=22, events=POLLIN}, {fd=24, events=POLLIN}, {fd=26, events=POLLIN}], 7, 21 <unfinished ...>
+[pid 550285] <... openat resumed>)      = 27
+[pid 550285] fcntl(27, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(27, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xc9, 0x4), 0x7ffe56fb0250) = 0
+[pid 550285] ioctl(27, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xce, 0x10), 0x7ffe56fb0240) = 0
+[pid 550285] dup(27)                    = 28
+[pid 550285] fcntl(28, F_SETFD, FD_CLOEXEC) = 0
+[pid 550285] ioctl(27, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fb0230) = 0
+[pid 550285] write(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] <... poll resumed>)        = 1 ([{fd=15, revents=POLLIN}])
+[pid 550285] futex(0x7ffe56fb0300, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1717592358, tv_nsec=548028000}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+[pid 550293] read(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] futex(0x7ffe56fb0300, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 550285] <... futex resumed>)       = 0
+[pid 550293] <... futex resumed>)       = 1
+[pid 550285] openat(AT_FDCWD, "/dev/nvidia0", O_RDWR|O_CLOEXEC <unfinished ...>
+[pid 550293] poll([{fd=15, events=POLLIN}, {fd=17, events=POLLIN}, {fd=19, events=POLLIN}, {fd=21, events=POLLIN}, {fd=22, events=POLLIN}, {fd=24, events=POLLIN}, {fd=26, events=POLLIN}, {fd=28, events=POLLIN}], 8, 21 <unfinished ...>
+[pid 550285] <... openat resumed>)      = 29
+[pid 550285] fcntl(29, F_GETFD)         = 0x1 (flags FD_CLOEXEC)
+[pid 550285] ioctl(29, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xc9, 0x4), 0x7ffe56fb0250) = 0
+[pid 550285] ioctl(29, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0xce, 0x10), 0x7ffe56fb0240) = 0
+[pid 550285] dup(29)                    = 30
+[pid 550285] fcntl(30, F_SETFD, FD_CLOEXEC) = 0
+[pid 550285] ioctl(29, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56fb0230) = 0
+[pid 550285] write(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] <... poll resumed>)        = 1 ([{fd=15, revents=POLLIN}])
+[pid 550285] futex(0x7ffe56fb0300, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1717592358, tv_nsec=548458000}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+[pid 550293] read(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] futex(0x7ffe56fb0300, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 550285] <... futex resumed>)       = 0
+[pid 550293] <... futex resumed>)       = 1
+[pid 550293] poll([{fd=15, events=POLLIN}, {fd=17, events=POLLIN}, {fd=19, events=POLLIN}, {fd=21, events=POLLIN}, {fd=22, events=POLLIN}, {fd=24, events=POLLIN}, {fd=26, events=POLLIN}, {fd=28, events=POLLIN}, {fd=30, events=POLLIN}], 9, 20 <unfinished ...>
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf1a0) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf250) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf2e0) = 0
+[pid 550285] mmap(NULL, 201322496, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc4aa001000
+[pid 550285] munmap(0x7fc4aa001000, 33550336) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2b, 0x30), 0x7ffe56faf620) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x49, 0), 0x7ffe56faf300) = 0
+[pid 550285] ioctl(9, _IOC(_IOC_NONE, 0, 0x21, 0), 0x7ffe56facef0) = 0
+[pid 550285] brk(0x55c71f43d000)        = 0x55c71f43d000
+[pid 550285] brk(0x55c71f47c000)        = 0x55c71f47c000
+[pid 550285] brk(0x55c71f4e3000)        = 0x55c71f4e3000
+[pid 550285] brk(0x55c71f526000)        = 0x55c71f526000
+[pid 550285] brk(0x55c71f555000)        = 0x55c71f555000
+[pid 550285] brk(0x55c71f582000)        = 0x55c71f582000
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf2e0) = 0
+[pid 550285] openat(AT_FDCWD, "/proc/self/task/550293/comm", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 31
+[pid 550285] newfstatat(31, "", {st_mode=S_IFREG|0644, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 550285] write(31, "cuda-EvtHandlr", 14) = 14
+[pid 550285] close(31)                  = 0
+[pid 550285] pipe2([31, 32], O_CLOEXEC) = 0
+[pid 550285] fcntl(31, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
+[pid 550285] fcntl(32, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
+[pid 550285] write(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] <... poll resumed>)        = 1 ([{fd=15, revents=POLLIN}])
+[pid 550285] futex(0x7ffe56fb0380, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1717592358, tv_nsec=556306000}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+[pid 550293] read(15, "\1\0\0\0\0\0\0\0", 8) = 8
+[pid 550293] futex(0x7ffe56fb0380, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 550285] <... futex resumed>)       = 0
+[pid 550293] <... futex resumed>)       = 1
+[pid 550293] poll([{fd=15, events=POLLIN}, {fd=17, events=POLLIN}, {fd=19, events=POLLIN}, {fd=21, events=POLLIN}, {fd=22, events=POLLIN}, {fd=24, events=POLLIN}, {fd=26, events=POLLIN}, {fd=28, events=POLLIN}, {fd=30, events=POLLIN}, {fd=31, events=POLLIN}], 10, 12 <unfinished ...>
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56fafa60) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf710) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf710) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf710) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf970) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf820) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf710) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf710) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf710) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf970) = 0
+[pid 550285] ioctl(8, _IOC(_IOC_READ|_IOC_WRITE, 0x46, 0x2a, 0x20), 0x7ffe56faf820) = 0
+[pid 550285] write(1, "\n", 1
+)          = 1
+[pid 550285] write(1, "Device 0: \"NVIDIA GeForce RTX 30"..., 36Device 0: "NVIDIA GeForce RTX 3080"
+) = 36
+[pid 550285] write(1, "  CUDA Driver Version / Runtime "..., 61  CUDA Driver Version / Runtime Version          12.4 / 12.4
+) = 61
+[pid 550285] write(1, "  CUDA Capability Major/Minor ve"..., 53  CUDA Capability Major/Minor version number:    8.6
+) = 53
+[pid 550285] write(1, "  Total amount of global memory:"..., 82  Total amount of global memory:                 10002 MBytes (10488315904 bytes)
+) = 82
+[pid 550285] write(1, "  (068) Multiprocessors, (128) C"..., 65  (068) Multiprocessors, (128) CUDA Cores/MP:    8704 CUDA Cores
+) = 65
+[pid 550285] write(1, "  GPU Max Clock rate:           "..., 69  GPU Max Clock rate:                            1710 MHz (1.71 GHz)
+) = 69
+[pid 550285] write(1, "  Memory Clock rate:            "..., 58  Memory Clock rate:                             9501 Mhz
+) = 58
+[pid 550285] write(1, "  Memory Bus Width:             "..., 57  Memory Bus Width:                              320-bit
+) = 57
+[pid 550285] write(1, "  L2 Cache Size:                "..., 63  L2 Cache Size:                                 5242880 bytes
+) = 63
+[pid 550285] write(1, "  Maximum Texture Dimension Size"..., 107  Maximum Texture Dimension Size (x,y,z)         1D=(131072), 2D=(131072, 65536), 3D=(16384, 16384, 16384)
+) = 107
+[pid 550285] write(1, "  Maximum Layered 1D Texture Siz"..., 73  Maximum Layered 1D Texture Size, (num) layers  1D=(32768), 2048 layers
+) = 73
+[pid 550285] write(1, "  Maximum Layered 2D Texture Siz"..., 80  Maximum Layered 2D Texture Size, (num) layers  2D=(32768, 32768), 2048 layers
+) = 80
+[pid 550285] write(1, "  Total amount of constant memor"..., 61  Total amount of constant memory:               65536 bytes
+) = 61
+[pid 550285] write(1, "  Total amount of shared memory "..., 61  Total amount of shared memory per block:       49152 bytes
+) = 61
+[pid 550285] write(1, "  Total shared memory per multip"..., 62  Total shared memory per multiprocessor:        102400 bytes
+) = 62
+[pid 550285] write(1, "  Total number of registers avai"..., 55  Total number of registers available per block: 65536
+) = 55
+[pid 550285] write(1, "  Warp size:                    "..., 52  Warp size:                                     32
+) = 52
+[pid 550285] write(1, "  Maximum number of threads per "..., 54  Maximum number of threads per multiprocessor:  1536
+) = 54
+[pid 550285] write(1, "  Maximum number of threads per "..., 54  Maximum number of threads per block:           1024
+) = 54
+[pid 550285] write(1, "  Max dimension size of a thread"..., 65  Max dimension size of a thread block (x,y,z): (1024, 1024, 64)
+) = 65
+[pid 550285] write(1, "  Max dimension size of a grid s"..., 75  Max dimension size of a grid size    (x,y,z): (2147483647, 65535, 65535)
+) = 75
+[pid 550285] write(1, "  Maximum memory pitch:         "..., 66  Maximum memory pitch:                          2147483647 bytes
+) = 66
+[pid 550285] write(1, "  Texture alignment:            "..., 59  Texture alignment:                             512 bytes
+) = 59
+[pid 550285] write(1, "  Concurrent copy and kernel exe"..., 75  Concurrent copy and kernel execution:          Yes with 2 copy engine(s)
+) = 75
+[pid 550285] write(1, "  Run time limit on kernels:    "..., 52  Run time limit on kernels:                     No
+) = 52
+[pid 550285] write(1, "  Integrated GPU sharing Host Me"..., 52  Integrated GPU sharing Host Memory:            No
+) = 52
+[pid 550285] write(1, "  Support host page-locked memor"..., 53  Support host page-locked memory mapping:       Yes
+) = 53
+[pid 550285] write(1, "  Alignment requirement for Surf"..., 53  Alignment requirement for Surfaces:            Yes
+) = 53
+[pid 550285] write(1, "  Device has ECC support:       "..., 58  Device has ECC support:                        Disabled
+) = 58
+[pid 550285] write(1, "  Device supports Unified Addres"..., 53  Device supports Unified Addressing (UVA):      Yes
+) = 53
+[pid 550285] write(1, "  Device supports Managed Memory"..., 53  Device supports Managed Memory:                Yes
+) = 53
+[pid 550285] write(1, "  Device supports Compute Preemp"..., 53  Device supports Compute Preemption:            Yes
+) = 53
+[pid 550285] write(1, "  Supports Cooperative Kernel La"..., 53  Supports Cooperative Kernel Launch:            Yes
+) = 53
+[pid 550285] write(1, "  Supports MultiDevice Co-op Ker"..., 53  Supports MultiDevice Co-op Kernel Launch:      Yes
+) = 53
+[pid 550285] write(1, "  Device PCI Domain ID / Bus ID "..., 61  Device PCI Domain ID / Bus ID / location ID:   0 / 161 / 0
+) = 61
+[pid 550285] write(1, "  Compute Mode:\n", 16  Compute Mode:
+) = 16
+[pid 550285] write(1, "     < Default (multiple host th"..., 94     < Default (multiple host threads can use ::cudaSetDevice() with device simultaneously) >
+) = 94
+[pid 550285] write(1, "\n", 1
+)          = 1
+[pid 550285] write(1, "deviceQuery, CUDA Driver = CUDAR"..., 104deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 12.4, CUDA Runtime Version = 12.4, NumDevs = 1
+) = 104
+[pid 550285] write(1, "Result = PASS\n", 14Result = PASS
+) = 14
+[pid 550285] exit_group(0)              = ?
+[pid 550294] <... futex resumed>)       = ?
+[pid 550286] <... poll resumed> <unfinished ...>) = ?
+[pid 550293] <... poll resumed>)        = 231
+[pid 550294] +++ exited with 0 +++
+[pid 550293] +++ exited with 0 +++
+[pid 550286] +++ exited with 0 +++
++++ exited with 0 +++
