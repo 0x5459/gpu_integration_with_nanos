@@ -1,0 +1,16 @@
+{
+    "Program": "deviceQuery",
+    "KlibDir": "klibs",
+    "Klibs": [
+        "gpu_nvidia"
+    ],
+    "Dirs": [
+        "lib",
+        "lib64",
+        "nvidia"
+    ],
+    "Files": ["/lib/x86_64-linux-gnu/libdl.so.2", "/lib/x86_64-linux-gnu/libpthread.so.0", "/lib/x86_64-linux-gnu/librt.so.1"],
+    "RunConfig": {
+        "GPUs": 1
+    }
+}
